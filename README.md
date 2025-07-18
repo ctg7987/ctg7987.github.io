@@ -1,2 +1,2 @@
-# ctg7987.github.io
-Calvin's Portifolio
+# Portfolio Structure
+Calvin's Portfolio
