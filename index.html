@@ -1,33 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon - Calvin's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calvin Gutsa | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0d0d0d;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
       color: #ffffff;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-      margin: 0;
       text-align: center;
     }
+
     h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-weight: 900;
+      margin: 0.5em 0 0.2em;
+      background: linear-gradient(90deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    p {
+
+    h2 {
       font-size: 1.2rem;
-      color: #bbbbbb;
+      font-weight: 400;
+      color: #bfbfbf;
+      margin: 0;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 1.5em auto 2em;
+      color: #dddddd;
+      line-height: 1.6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 2em;
+    }
+
+    .social-icons a {
+      color: #ffffff;
+      font-size: 1.5rem;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .badge {
+      background: #38bdf8;
+      color: #000;
+      padding: 0.4em 0.8em;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8rem;
+      color: #666;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>🚧 Coming Soon 🚧</h1>
-  <p>I'm working on my portfolio. Check back soon!</p>
+
+  <div class="badge">🚧 In Progress</div>
+  <h1>Calvin Gutsa</h1>
+  <h2>AI Researcher • Software Engineer • Innovation Strategist</h2>
+  <p>
+    I'm a penultimate-year Computer Engineering student at NYU Abu Dhabi.  
+    Passionate about AI, mental health tech, and building solutions that empower children and communities.  
+    My portfolio is launching soon — stay tuned for research, projects, and tools at the edge of technology and social good.
+  </p>
+
+  <div class="social-icons">
+    <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/calvin-gutsa-8a70b3230" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:ctg7987@nyu.edu"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Calvin Gutsa • Portfolio Coming Soon
+  </div>
+
 </body>
 </html>
+
