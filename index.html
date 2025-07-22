@@ -78,21 +78,27 @@
     </div>
   </section>
 
- <!-- CONTACT SECTION -->
-  <section id="contact">
-    <div class="contact-card">
-      <h3 class="text-subtitle">Contact Me!</h3>
-      <form action="mailto:ctg7987@nyu.edu" method="post" enctype="text/plain">
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="contact-card">
+    <form action="https://formsubmit.co/calvingutsa@nyu.edu" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      
+      <div class="form-group">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px" required></textarea>
+
         <input type="submit" value="Submit">
-      </form>
-    </div>
-  </section>
+      </div>
+    </form>
+  </div>
+</section>
    
   <!-- Footer -->
   <footer class="footer">
