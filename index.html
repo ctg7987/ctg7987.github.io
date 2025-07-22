@@ -25,29 +25,45 @@
   <!-- Intro Header -->
   <header class="hero-header futuristic-header">
     <div class="hero-bg-animated"></div>
-    <div class="glass-card" aria-label="Landing Section">
-      <h1 class="futuristic-title">Calvin Gutsa</h1>
-      <p class="futuristic-subtitle" style="color:#fff; text-shadow:0 0 8px #38bdf8,0 0 2px #a855f7;">Software Engineering Intern &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; Innovative Solutions Developer</p>
-      <span class="tagline">Building the future, one idea at a time.</span>
-    </div>
-    <div class="video-bg-wrap" style="position:relative; z-index:0;">
-      <video id="video-background" autoplay muted loop class="main-video" style="display:block; width:100%; max-height:400px; object-fit:cover; border-radius:30px; box-shadow:0 0 32px #38bdf8aa; background:#222;">
+    <div class="hero-fullscreen">
+      <video id="video-background" autoplay muted loop class="main-video" style="position:absolute; top:0; left:0; width:100vw; height:100vh; object-fit:cover; z-index:-1; border-radius:0; opacity:0.22;">
         <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div class="hero-content" style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh;">
+        <h1 class="futuristic-title" style="font-size:4rem; margin-bottom:18px; text-align:center;">
+          <span style="font-size:3.2rem;">👋</span> Calvin Gutsa
+        </h1>
+        <p class="futuristic-subtitle" style="color:#fff; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; font-size:2rem; margin-bottom:18px;">
+          Software Engineering Intern &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; Innovative Solutions Developer
+        </p>
+        <span class="tagline" style="background:rgba(0,0,0,0.45); color:#fff; padding:12px 32px; border-radius:18px; font-size:1.5rem; margin-top:12px; box-shadow:0 2px 16px #14b8a6aa;">
+          🚀 Building the future, one idea at a time.
+        </span>
+      </div>
     </div>
   </header>
+  <!-- Divider: Hero to Welcome -->
+  <div style="width:100vw; left:50%; transform:translateX(-50%); position:relative; z-index:10; margin-bottom:-6px;">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100vw; height:80px;"><path fill="#14b8a6" fill-opacity="0.7" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z"></path></svg>
+  </div>
 
   <!-- Welcome Section -->
-  <section class="welcome-card">
-    <h2>Welcome to Calvin's Portfolio!</h2>
-    <p>Hello and thank you for visiting! I'm Calvin, a tech person passionate about building software systems that matter, from children-focused chatbots to backend automation tools and research platforms.</p>
-    <p>My work fuses engineering, behavioral science, and thoughtful design. You're welcome to explore and collaborate!</p>
+  <section class="welcome-card" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/futuristic-lights.jpg') center/cover no-repeat; min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="welcome-quote-overlay" style="position:absolute; top:32px; left:50%; transform:translateX(-50%); background:rgba(17,17,17,0.65); color:#fff; padding:24px 40px; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa; font-size:1.5rem; font-family:'Caveat', 'Chewy', cursive; z-index:2; max-width:700px; text-align:center;">
+      "Creativity is intelligence having fun." <span style="font-size:2rem;">✨</span>
+    </div>
+    <h2 style="position:relative; z-index:2; margin-top:120px; font-size:2.8rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">Welcome to Calvin's Portfolio!</h2>
+    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:18px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">Hello and thank you for visiting! I'm Calvin, a tech person passionate about building software systems that matter, from children-focused chatbots to backend automation tools and research platforms.</p>
+    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:8px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">My work fuses engineering, behavioral science, and thoughtful design. You're welcome to explore and collaborate!</p>
   </section>
 
   <!-- About Me Section -->
-  <section id="about" aria-label="About Me">
-    <div class="about-card glass-card about-animate">
+  <section id="about" aria-label="About Me" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/museum-of-the-future.jpg') center/cover no-repeat; min-height:480px; display:flex; align-items:center; justify-content:center;">
+    <div class="about-quote-overlay" style="position:absolute; top:32px; left:50%; transform:translateX(-50%); background:rgba(17,17,17,0.65); color:#fff; padding:24px 40px; border-radius:24px; box-shadow:0 2px 24px #fb7185aa; font-size:1.5rem; font-family:'Caveat', 'Chewy', cursive; z-index:2; max-width:700px; text-align:center;">
+      "Engineering is the art of directing the great sources of power in nature for the use and convenience of man." <span style="font-size:2rem;">🌱</span>
+    </div>
+    <div class="about-card glass-card about-animate" style="position:relative; z-index:2; background:rgba(255,255,255,0.85);">
       <div class="about-image">
         <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa" />
       </div>
@@ -65,37 +81,41 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title futuristic-title">
-        <span class="futuristic-icon">🛠</span> Projects
-      </h2>
-    </div>
-    <div class="projects-grid container">
-      <div class="project-card glass-card project-animate">
-        <img src="img/ai-hand.jpg" alt="AI Hand Illustration" />
-        <h3>USSD Food Delivery Platform</h3>
-        <p>Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
+  <section id="projects" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/ai-hand.jpg') center/cover no-repeat; min-height:600px; padding:80px 0;">
+    <h2 class="section-title futuristic-title" style="margin-bottom:3.5rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">
+      <span class="futuristic-icon">🛠</span> Projects
+    </h2>
+    <div class="project-story">
+      <!-- Project 1: Image Left, Text Right -->
+      <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px;">
+        <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
+          <img src="img/ai-hand.jpg" alt="AI Hand Illustration" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
+        </div>
+        <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
+          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">USSD Food Delivery Platform <span style="font-size:2rem;">🍔</span></h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
+        </div>
       </div>
-      <div class="project-card glass-card project-animate">
-        <img src="img/museum-of-the-future.jpg" alt="Toddler Safety Device" />
-        <h3>Safety Device for Toddlers</h3>
-        <p>Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
+      <!-- Project 2: Text Left, Image Right -->
+      <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px; flex-direction:row-reverse;">
+        <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
+          <img src="img/museum-of-the-future.jpg" alt="Toddler Safety Device" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #fb7185aa;" />
+        </div>
+        <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
+          <h3 style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:12px;">Safety Device for Toddlers <span style="font-size:2rem;">🧸</span></h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
+        </div>
       </div>
-      <div class="project-card glass-card project-animate">
-        <img src="img/futuristic-lights.jpg" alt="Novelty Mood Research" />
-        <h3>Interactive Chatbot for Children</h3>
-        <p>Exploring how new experiences affect memory, affective states, and learning behavior.</p>
+      <!-- Project 3: Image Left, Text Right -->
+      <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px;">
+        <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
+          <img src="img/futuristic-lights.jpg" alt="Novelty Mood Research" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
+        </div>
+        <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
+          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">Interactive Chatbot for Children <span style="font-size:2rem;">🤖</span></h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Exploring how new experiences affect memory, affective states, and learning behavior.</p>
+        </div>
       </div>
-      <script>
-        // Staggered animation for project cards
-        document.addEventListener('DOMContentLoaded', function() {
-          const cards = document.querySelectorAll('.project-animate');
-          cards.forEach((card, i) => {
-            card.style.animationDelay = `${0.2 + i * 0.25}s`;
-          });
-        });
-      </script>
     </div>
   </section>
 
@@ -124,6 +144,18 @@
     </form>
   </div>
 </section>
+  <!-- Divider: Welcome to About Me -->
+  <div style="width:100vw; left:50%; transform:translateX(-50%); position:relative; z-index:10; margin-bottom:-6px;">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100vw; height:80px;"><path fill="#fb7185" fill-opacity="0.7" d="M0,48 C480,0 960,80 1440,32 L1440,80 L0,80 Z"></path></svg>
+  </div>
+  <!-- Divider: About Me to Projects -->
+  <div style="width:100vw; left:50%; transform:translateX(-50%); position:relative; z-index:10; margin-bottom:-6px;">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100vw; height:80px;"><path fill="#14b8a6" fill-opacity="0.7" d="M0,32 C360,80 1080,0 1440,48 L1440,80 L0,80 Z"></path></svg>
+  </div>
+  <!-- Divider: Projects to Contact -->
+  <div style="width:100vw; left:50%; transform:translateX(-50%); position:relative; z-index:10; margin-bottom:-6px;">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100vw; height:80px;"><path fill="#fb7185" fill-opacity="0.7" d="M0,48 C480,0 960,80 1440,32 L1440,80 L0,80 Z"></path></svg>
+  </div>
    
   <!-- Footer -->
   <footer class="footer">
