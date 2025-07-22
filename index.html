@@ -15,11 +15,11 @@
 
   <!-- Navigation Bar -->
   <nav class="main-nav glass-nav" aria-label="Main Navigation">
-    <a href="#" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About Me</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
+    <a href="#" class="nav-link" aria-label="Home">Home</a>
+    <a href="#about" class="nav-link" aria-label="About Me">About Me</a>
+    <a href="#projects" class="nav-link" aria-label="Projects">Projects</a>
+    <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
+    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link" aria-label="Resume">Resume</a>
   </nav>
 
   <!-- Intro Header -->
@@ -120,26 +120,22 @@
   </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact">
-  <div class="contact-card">
-    <form action="https://formsubmit.co/calvingutsa@gmail.com" method="POST">
+<section id="contact" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/futuristic-lights.jpg') center/cover no-repeat; min-height:480px; display:flex; align-items:center; justify-content:center;">
+  <div class="contact-card" style="position:relative; z-index:2; background:rgba(255,255,255,0.85); border-radius:32px; box-shadow:0 2px 24px #14b8a6aa; padding:48px 32px; max-width:520px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <form action="https://formsubmit.co/calvingutsa@gmail.com" method="POST" style="width:100%;">
       <input type="hidden" name="_captcha" value="false" />
-
-      <div class="text-section">
-        <h3 class="text-subtitle">Contact Me!<br></h3>
+      <div class="text-section" style="text-align:center; margin-bottom:18px;">
+        <h3 class="text-subtitle" style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:8px;">Contact Me! <span style="font-size:2rem;">✉️</span></h3>
+        <p style="font-size:1.15rem; color:#222; font-family:'Fredoka', Arial, sans-serif;">Let's connect and build something amazing together!</p>
       </div>
-      
-      <div class="form-group">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px" required></textarea>
-
-        <input type="submit" value="Submit">
+      <div class="form-group" style="width:100%; display:flex; flex-direction:column; gap:18px;">
+        <label for="fname" style="font-family:'Fredoka', Arial, sans-serif; color:#14b8a6; font-size:1.1rem;">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required style="padding:12px; border-radius:12px; border:1.5px solid #14b8a6; font-size:1.1rem;" aria-label="First Name" />
+        <label for="lname" style="font-family:'Fredoka', Arial, sans-serif; color:#fb7185; font-size:1.1rem;">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required style="padding:12px; border-radius:12px; border:1.5px solid #fb7185; font-size:1.1rem;" aria-label="Last Name" />
+        <label for="subject" style="font-family:'Fredoka', Arial, sans-serif; color:#222; font-size:1.1rem;">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px; padding:12px; border-radius:12px; border:1.5px solid #14b8a6; font-size:1.1rem;" required aria-label="Subject"></textarea>
+        <input type="submit" value="Submit" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); color:#fff; font-weight:bold; border:none; border-radius:999px; padding:14px 0; font-size:1.2rem; cursor:pointer; box-shadow:0 2px 16px #14b8a6aa; transition:background 0.2s, transform 0.2s; margin-top:8px;" aria-label="Submit Contact Form" />
       </div>
     </form>
   </div>
@@ -158,19 +154,19 @@
   </div>
    
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-glow">
-      <div class="footer-col">
-        <h4>Connect with me</h4>
-        <div class="social-links futuristic-icons">
-          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ctg7987" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/calvingutsa?s=21" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/calvingutsa/" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/calvin.gutsa/" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+  <footer class="footer" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); border-radius:0; box-shadow:none; padding:56px 0 32px 0;">
+    <div class="footer-glow" style="background:rgba(17,17,17,0.85); border-radius:32px; box-shadow:0 0 40px 10px #14b8a6aa, 0 0 80px 20px #fb7185aa; max-width:700px; margin:0 auto; padding:32px 20px 16px 20px;">
+      <div class="footer-col" style="margin-bottom:18px;">
+        <h4 style="font-size:2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:18px; letter-spacing:2px; text-shadow:0 0 8px #14b8a6, 0 0 2px #fff;">Connect with me <span style="font-size:2rem;">🌐</span></h4>
+        <div class="social-links futuristic-icons" style="display:flex; justify-content:center; gap:22px; margin-bottom:10px;">
+          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="icon-link" style="background:linear-gradient(135deg,#14b8a6 0%,#fb7185 100%);"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ctg7987" target="_blank" class="icon-link" style="background:linear-gradient(135deg,#fb7185 0%,#14b8a6 100%);"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/calvingutsa?s=21" target="_blank" class="icon-link" style="background:linear-gradient(135deg,#14b8a6 0%,#fb7185 100%);"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/calvingutsa/" target="_blank" class="icon-link" style="background:linear-gradient(135deg,#fb7185 0%,#14b8a6 100%);"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/calvin.gutsa/" target="_blank" class="icon-link" style="background:linear-gradient(135deg,#14b8a6 0%,#fb7185 100%);"><i class="fab fa-facebook-f"></i></a>
         </div>
         <br>
-        <p class="footer-copy">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
+        <p class="footer-copy" style="font-size:1.15rem; color:#a8edea; margin-top:18px; letter-spacing:1.5px; text-shadow:0 0 4px #14b8a6, 0 0 1px #fff; font-family:'Fredoka', Arial, sans-serif;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
       </div>
     </div>
   </footer>
