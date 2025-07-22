@@ -40,38 +40,46 @@ body {
 
 /* === Navigation Bar === */
 .glass-nav {
-  background: rgba(255,255,255,0.25);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
   border-radius: 999px;
-  padding: 16px 40px;
+  padding: 18px 48px;
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
-  position: sticky;
-  top: 20px;
-  z-index: 100;
-  width: fit-content;
-  font-weight: 600;
-  box-shadow: 0 4px 24px rgba(168,85,247,0.10), 0 0 24px #38bdf8aa;
-  margin: 40px auto 32px auto;
+  gap: 2.8rem;
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  width: auto;
+  font-weight: 700;
+  box-shadow: 0 2px 24px rgba(56,189,248,0.10), 0 0 24px #38bdf8aa;
+  margin: 0 auto;
+  border: 2.5px solid #38bdf8;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .nav-link {
   color: #222;
   text-decoration: none;
   font-size: 1.18rem;
-  padding: 12px 32px;
+  padding: 14px 36px;
   border-radius: 999px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
   font-family: 'Fredoka', Arial, sans-serif;
   letter-spacing: 1.5px;
   position: relative;
   font-weight: 700;
+  background: rgba(255,255,255,0.55);
+  margin: 0 4px;
+  border: none;
 }
 .nav-link:hover, .nav-link:focus {
-  background: linear-gradient(90deg, #a855f7 0%, #38bdf8 100%);
+  background: linear-gradient(90deg, #14b8a6 0%, #fb7185 100%);
   color: #fff;
-  box-shadow: 0 0 12px #38bdf8aa;
+  box-shadow: 0 0 16px #14b8a6cc, 0 0 24px #fb7185cc;
   outline: none;
+  transform: scale(1.08) rotate(-2deg);
 }
 
 /* === Hero Section === */
