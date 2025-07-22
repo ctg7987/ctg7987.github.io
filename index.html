@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calvin Gutsa | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin: 0.5em 0 0.2em;
-      background: linear-gradient(90deg, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #bfbfbf;
-      margin: 0;
-    }
-
-    p {
-      max-width: 600px;
-      margin: 1.5em auto 2em;
-      color: #dddddd;
-      line-height: 1.6;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 2em;
-    }
-
-    .social-icons a {
-      color: #ffffff;
-      font-size: 1.5rem;
-      transition: transform 0.2s ease;
-      text-decoration: none;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    .badge {
-      background: #38bdf8;
-      color: #000;
-      padding: 0.4em 0.8em;
-      font-size: 0.8rem;
-      border-radius: 20px;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #666;
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
+  <header>
+    <video id="video-background" autoplay muted loop class="main-video">
+      <source src="vid/mbg.mp4" type="video/mp4">
+    </video>
 
-  <div class="badge"> In Progress</div>
-  <h1>Calvin Gutsa</h1>
-  <h2>Emerging Technologies • Software Solutions • Innovative Strategies</h2>
-  <p>
-    I am a Computer Engineering student at NYU Abu Dhabi. I care about building thoughtful tools that solve real problems.
-    I am especially interested in emerging technologies, mental health, and community-driven solutions. My portfolio is launching soon. 
-    Stay tuned for projects that explore how technology can create a meaningful impact.
-  </p>
+    <main>
+      <nav>
+        <div class="container">
+          <a href="index.html" class="brand">Calvin Gutsa</a>
+          <ul>
+            <li><a href="index.html" class="link-active">Home</a></li>
+            <li><a href="photo.html">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+          </ul>
+        </div>
+      </nav>
 
-  <div class="social-icons">
-    <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/calvin-gutsa-8a70b3230" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:ctg7987@nyu.edu"><i class="fas fa-envelope"></i></a>
-  </div>
+      <div class="header-body">
+        <div class="container">
+          <div class="slider">
+            <h1 class="slider-count">/01</h1>
+            <div class="progress"><div></div></div>
+            <p class="slider-cntrl active">Chatbot Systems</p>
+            <p class="slider-cntrl active">Embedded Devices</p>
+            <p class="slider-cntrl active">Behavioral Research</p>
+          </div>
+          <div>
+            <h1 class="title">Building with Purpose</h1>
+            <p>
+              Creating systems that bridge
+              <span class="sub-title">technology</span> and
+              <u>human-centered innovation</u>
+            </p>
+            <ul class="pagination-mobile">
+              <li class="pag-active"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="footer">
-   Copyright &copy; 2025 Calvin Gutsa • All Rights Reserved
-  </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="item">
+              <h4>Updates</h4>
+              <small>Researching memory and novelty</small>
+              <small>Summer 2025</small>
+              <a href="#news">Read More</a>
+            </div>
+            <div class="item">
+              <h4>News</h4>
+              <small>
+                Launching a new
+                <span class="sub-title">open-source chatbot interface</span>
+              </small>
+              <a href="#news">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </header>
 
+  <section id="about">
+    <div class="main">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="img/pf6.jpg" alt="Calvin Profile Picture">
+        </div>
+        <div class="about-text">
+          <h1>About Me</h1>
+          <h5>Engineer<span> • Researcher • Builder</span></h5>
+          <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
+          <p>Originally from Zimbabwe and currently based in the UAE, I’ve worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I’m passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
+          <p>Whether it’s prototyping a USSD platform for low-connectivity regions or developing emotion-aware chatbots, I care about building tools that matter. Let's connect and collaborate!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="photo.html">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="mailto:ctg7987@nyu.edu">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/ctg7987" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-
