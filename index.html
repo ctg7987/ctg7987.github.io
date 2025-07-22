@@ -8,106 +8,89 @@
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
-
 <body>
-  <!-- === Navigation Bar === -->
-  <nav class="navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing"  target="_blank">Resume</a></li>
-    </ul>
+  <!-- Quote Banner -->
+  <div class="quote-banner">"When code breaks, creativity begins."</div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank">Resume</a>
   </nav>
 
-  <!-- === Hero Section === -->
-  <header>
-    <div class="container1">
-      <h1 class="big-title">Calvin Gutsa</h1>
-      <h3 class="small-title">Software Engineer Intern | AI/ML Researcher |  Innovative Solutions Builder</h3>
-      <video id="video-background" autoplay muted loop class="main-video">
-        <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Calvin Gutsa</h1>
+    <p>Software Engineer Intern • AI/ML Researcher • Innovative Solutions Builder</p>
+    <video id="video-background" autoplay muted loop class="main-video">
+      <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
+    </video>
+  </section>
 
-  <!-- === Welcome Section === -->
-  <div class="text-container">
-    <div class="text-details">
-      <div class="text-section">
-        <h2 class="text-title">Welcome to Calvin's Portfolio!</h2>
-        <p>Hello and thank you for visiting! I'm Calvin, a creative technologist passionate about building software systems that matter, from children-focused chatbots to backend automation tools and research platforms.</p>
-        <p>My work fuses engineering, behavioral science, and thoughtful design. You're welcome to explore and collaborate!</p>
-      </div>
-    </div>
-  </div>
+  <!-- Welcome Section -->
+  <section class="welcome-card">
+    <h2>Welcome to Calvin's Portfolio!</h2>
+    <p>Hello and thank you for visiting! I'm Calvin, a creative technologist passionate about building software systems that matter, from children-focused chatbots to backend automation tools and research platforms.</p>
+    <p>My work fuses engineering, behavioral science, and thoughtful design. You're welcome to explore and collaborate!</p>
+  </section>
 
-  <!-- === About Me Section === -->
+  <!-- About Me Section -->
   <section id="about">
-    <div class="main">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa" />
-        </div>
-        <div class="about-text">
-          <h1>About Me</h1>
-          <h5>Engineer<span> • Researcher • Builder</span></h5>
-          <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
-          <p>Originally from Zimbabwe and currently based in the UAE, I have worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I am passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
-        </div>
+    <div class="about-card">
+      <div class="about-image">
+        <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa" />
+      </div>
+      <div class="about-text">
+        <h1>About Me</h1>
+        <h5>Engineer • Researcher • Builder</h5>
+        <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
+        <p>Originally from Zimbabwe and currently based in the UAE, I have worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I am passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
       </div>
     </div>
   </section>
 
-  <!-- === Projects Section === -->
+  <!-- Projects Section -->
   <section id="projects">
-    <div class="container">
-      <h2 class="text-subtitle">🛠 Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="img/web/ai-hand.jpg" alt="AI Hand Illustration" />
-          <h3>USSD Food Delivery Platform</h3>
-          <p>Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/web/museum-of-the-future.jpg" alt="Toddler Safety Device" />
-          <h3>Safety Device for Toddlers</h3>
-          <p>Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/web/futuristic-lights.jpg" alt="Novelty Mood Research" />
-          <h3>Novelty & Mood Research</h3>
-          <p>Exploring how new experiences affect memory, affective states, and learning behavior.</p>
-        </div>
+    <h2 class="text-subtitle">🛠 Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="img/web/ai-hand.jpg" alt="AI Hand Illustration" />
+        <h3>USSD Food Delivery Platform</h3>
+        <p>Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
+      </div>
+      <div class="project-card">
+        <img src="img/web/museum-of-the-future.jpg" alt="Toddler Safety Device" />
+        <h3>Safety Device for Toddlers</h3>
+        <p>Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
+      </div>
+      <div class="project-card">
+        <img src="img/web/futuristic-lights.jpg" alt="Novelty Mood Research" />
+        <h3>Novelty & Mood Research</h3>
+        <p>Exploring how new experiences affect memory, affective states, and learning behavior.</p>
       </div>
     </div>
   </section>
 
-  <div class="contact-container">
-    <div class="text-section">
-      <h3 class="text-subtitle">Contact Me!<br></h3>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-card">
+      <h3 class="text-subtitle">Contact Me!</h3>
+      <form action="mailto:ctg7987@nyu.edu" method="post" enctype="text/plain">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px" required></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    <form action="mailto:maheeneatazaz@gmail.com" method="post" enctype="text/plain">
-  
-      <label for="fname">First Name<br></label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
-  
-      <label for="lname">Last Name<br></label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
-  
-      <label for="subject">Subject<br></label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
-  
-      <input type="submit" value="Submit">
-  
-    </form>
-  </div>
-  <!-- CONTACT END -->
+  </section>
 
-  <!-- === Footer === -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-col">
@@ -118,7 +101,6 @@
           <a href="https://x.com/calvingutsa?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="https://www.instagram.com/calvingutsa/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.facebook.com/calvin.gutsa/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      
         </div>
         <br>
         <p>&copy; 2025 Calvin Gutsa. All rights reserved.</p>
