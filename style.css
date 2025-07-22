@@ -187,28 +187,65 @@ nav a:hover {
 }
 
 /* === Footer === */
+
 .footer {
-  background-color: #111111;
-  padding: 40px 0;
+  background: linear-gradient(90deg, #a855f7 0%, #38bdf8 100%);
+  padding: 48px 0 24px 0;
   text-align: center;
   color: #fff;
+  position: relative;
+  box-shadow: 0 0 40px 10px #a855f744, 0 0 80px 20px #38bdf844;
+  overflow: hidden;
+}
+.footer-glow {
+  background: rgba(17,17,17,0.85);
+  border-radius: 30px;
+  box-shadow: 0 0 40px 10px #a855f7aa, 0 0 80px 20px #38bdf8aa;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 20px 16px 20px;
 }
 .footer h4 {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #a8edea;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #38bdf8, 0 0 2px #fff;
 }
 .footer-col {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
-.social-links a {
-  color: #ffffff;
-  font-size: 20px;
-  margin: 0 10px;
-  transition: color 0.3s;
+.futuristic-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
 }
-.social-links a:hover {
-  color: #a855f7;
+.icon-link {
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7 0%, #38bdf8 100%);
+  box-shadow: 0 0 12px #a855f7aa, 0 0 24px #38bdf8aa;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  animation: iconPulse 2.5s infinite alternate;
+}
+.icon-link:hover {
+  transform: scale(1.18) rotate(-8deg);
+  box-shadow: 0 0 24px #38bdf8cc, 0 0 48px #a855f7cc;
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+}
+@keyframes iconPulse {
+  0% { box-shadow: 0 0 12px #a855f7aa, 0 0 24px #38bdf8aa; }
+  100% { box-shadow: 0 0 24px #38bdf8cc, 0 0 48px #a855f7cc; }
+}
+.footer-copy {
+  font-size: 1rem;
+  color: #a8edea;
+  margin-top: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px #38bdf8, 0 0 1px #fff;
 }
 
 /* === Responsive === */

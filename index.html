@@ -13,7 +13,7 @@
   <div class="quote-banner">"When code breaks, creativity begins."</div>
 
   <!-- Navigation Bar -->
-  <nav>
+  <nav class="main-nav">
     <a href="#">Home</a>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
@@ -22,13 +22,17 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Calvin Gutsa</h1>
-    <p>Software Engineer Intern • AI/ML Researcher • Innovative Solutions Builder</p>
-    <video id="video-background" autoplay muted loop class="main-video">
-      <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
-    </video>
-  </section>
+  <header class="hero-header">
+    <div class="hero-content">
+      <h1 class="big-title">Calvin Gutsa</h1>
+      <h3 class="small-title">Software Engineer Intern | AI/ML Researcher | Innovative Solutions Builder</h3>
+    </div>
+    <div class="video-bg-wrap">
+      <video id="video-background" autoplay muted loop class="main-video">
+        <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </header>
 
   <!-- Welcome Section -->
   <section class="welcome-card">
@@ -45,6 +49,7 @@
       </div>
       <div class="about-text">
         <h1>About Me</h1>
+        <h5>Engineer • Researcher • Builder</h5>
         <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
         <p>Originally from Zimbabwe and currently based in the UAE, I have worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I am passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
       </div>
@@ -53,7 +58,6 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    
     <h2 class="text-subtitle">🛠 Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
@@ -76,56 +80,34 @@
 
  <!-- CONTACT SECTION -->
   <section id="contact">
-    <div class="text-container">
-      <div class="text-details">
-          <div class="text-section">
-              <h2 class="text-title">Contact Details<br><br></h2>
-              <h3 class="text-subtitle">Phone Number<br></h3>
-              <p>+971 544 758 203<br><br></p>
-          </div>
-          <div class="text-section">
-              <h3 class="text-subtitle">Email<br></h3>
-              <p>calvingutsa@gmail.com</p>
-          </div>
-      </div>
+    <div class="contact-card">
+      <h3 class="text-subtitle">Contact Me!</h3>
+      <form action="mailto:ctg7987@nyu.edu" method="post" enctype="text/plain">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px" required></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </section>
-
-  <div class="contact-container">
-    <div class="text-section">
-      <h3 class="text-subtitle">Contact Me!<br></h3>
-    </div>
-    <form action="mailto:maheeneatazaz@gmail.com" method="post" enctype="text/plain">
-  
-      <label for="fname">First Name<br></label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
-  
-      <label for="lname">Last Name<br></label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
-  
-      <label for="subject">Subject<br></label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
-  
-      <input type="submit" value="Submit">
-  
-    </form>
-  </div>
-  <!-- CONTACT END -->
    
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-glow">
       <div class="footer-col">
         <h4>Connect with me</h4>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/calvingutsa?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/calvingutsa/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/calvin.gutsa/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <div class="social-links futuristic-icons">
+          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ctg7987" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/calvingutsa?s=21" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/calvingutsa/" target="_blank" class="icon-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/calvin.gutsa/" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
         </div>
         <br>
-        <p>&copy; 2025 Calvin Gutsa. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
       </div>
     </div>
   </footer>
