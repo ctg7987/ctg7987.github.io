@@ -496,21 +496,136 @@
   <!-- Removed pink wave divider: Projects to Contact -->
    
   <!-- Footer -->
-<footer class="footer" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); border-radius:0; box-shadow:none; padding:56px 0 32px 0; margin-top:64px;">
-    <div class="footer-glow" style="background:#222; border-radius:1rem; box-shadow:0 0.25rem 1rem rgba(0,0,0,0.10); max-width:700px; margin:0 auto; padding:32px 20px 16px 20px;">
-      <div class="footer-col" style="margin-bottom:18px;">
-        <h4 style="font-size:2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:18px; letter-spacing:2px; text-shadow:0 0 8px #14b8a6, 0 0 2px #fff;">Connect with me <span style="font-size:2rem;">🌐</span></h4>
-        <div class="social-links futuristic-icons" style="display:flex; justify-content:center; gap:22px; margin-bottom:10px;">
-          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="icon-link" style="background:#14b8a6;"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ctg7987" target="_blank" class="icon-link" style="background:#fb7185;"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/calvingutsa?s=21" target="_blank" class="icon-link" style="background:#14b8a6;"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/calvingutsa/" target="_blank" class="icon-link" style="background:#fb7185;"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/calvin.gutsa/" target="_blank" class="icon-link" style="background:#14b8a6;"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <br>
-        <p class="footer-copy" style="font-size:1.15rem; color:#a8edea; margin-top:18px; letter-spacing:1.5px; text-shadow:0 0 4px #14b8a6, 0 0 1px #fff; font-family:'Fredoka', Arial, sans-serif;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
-      </div>
+<footer class="footer" style="background:linear-gradient(120deg,#14b8a6 0%,#38bdf8 50%,#fb7185 100%); border-radius:0; box-shadow:none; padding:48px 0 24px 0; margin-top:64px; width:100vw;">
+  <div class="footer-glow" style="background:rgba(34,34,34,0.92); border-radius:1rem; box-shadow:0 0.25rem 1rem rgba(0,0,0,0.10); max-width:700px; margin:0 auto; padding:32px 20px 16px 20px; display:flex; flex-direction:column; align-items:center;">
+    <h4 style="font-size:2.1rem; color:#e0f7fa; font-family:'Poppins',sans-serif; font-weight:500; margin-bottom:18px; letter-spacing:1.5px; text-align:center;">Connect with me <span style="font-size:2rem;">🌐</span></h4>
+    <div class="social-links futuristic-icons" style="display:flex; flex-wrap:wrap; justify-content:center; gap:22px; margin-bottom:10px;">
+      <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="icon-link" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ctg7987" target="_blank" class="icon-link" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/calvingutsa?s=21" target="_blank" class="icon-link" aria-label="Twitter/X" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/calvingutsa/" target="_blank" class="icon-link" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/calvin.gutsa/" target="_blank" class="icon-link" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
     </div>
-  </footer>
+    <p class="footer-copy" style="font-size:1.05rem; color:#a8edea; margin-top:18px; letter-spacing:1.2px; font-family:'Poppins',sans-serif; font-weight:400; text-align:center;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
+  </div>
+  <button class="footer-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:24px; right:24px; background:linear-gradient(120deg,#14b8a6 0%,#fb7185 100%); color:#fff; border:none; border-radius:50%; box-shadow:0 2px 16px #14b8a655; width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:999; opacity:0.85; transition:background 0.2s, box-shadow 0.2s, opacity 0.2s;"><i class="fas fa-arrow-up"></i></button>
+</footer>
+<style>
+.footer {
+  background: linear-gradient(120deg,#14b8a6 0%,#38bdf8 50%,#fb7185 100%);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 48px 0 24px 0;
+  margin-top: 64px;
+  width: 100vw;
+}
+.footer-glow {
+  background: rgba(34,34,34,0.92);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.10);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 20px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-links .icon-link {
+  background: #222;
+  color: #e0f7fa;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+  box-shadow: 0 2px 12px #14b8a655;
+  position: relative;
+}
+.social-links .icon-link:hover, .social-links .icon-link:focus {
+  transform: scale(1.15);
+  box-shadow: 0 0 24px #38bdf8cc, 0 0 12px #fb7185cc;
+  background: linear-gradient(120deg,#14b8a6 0%,#fb7185 100%);
+  color: #fff;
+  outline: none;
+}
+.social-links .icon-link[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #e0f7fa;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 10;
+}
+.footer-copy {
+  font-size: 1.05rem;
+  color: #a8edea;
+  margin-top: 18px;
+  letter-spacing: 1.2px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.footer-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(120deg,#14b8a6 0%,#fb7185 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px #14b8a655;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0.85;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+.footer-top:hover {
+  background: #fb7185;
+  box-shadow: 0 4px 24px #14b8a655;
+  opacity: 1;
+}
+@media (max-width: 700px) {
+  .footer-glow {
+    padding: 24px 8px 12px 8px;
+    max-width: 98vw;
+  }
+  .social-links {
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: center;
+  }
+  .footer-copy {
+    font-size: 0.95rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: linear-gradient(120deg,#222 0%,#14b8a6 50%,#222 100%);
+  }
+  .footer-glow {
+    background: rgba(20,20,20,0.98);
+  }
+  .footer-copy {
+    color: #e0f7fa;
+  }
+}
+</style>
 </body>
 </html>
