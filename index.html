@@ -303,6 +303,11 @@
     <div class="hero-content" style="position:relative; z-index:2; text-align:center; width:100vw; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <h1 style="font-size:clamp(3rem,7vw,5rem); font-family:'Fredoka', Arial, sans-serif; font-weight:700; color:#fff; margin-bottom:18px; letter-spacing:2px;">Calvin Gutsa</h1>
       <h2 style="font-size:clamp(2rem,5vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin-bottom:32px;">Software Developer</h2>
+      <div id="scroll-down-arrow" style="position:absolute; left:50%; bottom:48px; transform:translateX(-50%); z-index:10; opacity:1; transition:opacity 0.5s; pointer-events:none;">
+        <span style="display:inline-block; animation:pulseDown 1.2s infinite alternate;">
+          <i class="fas fa-arrow-down" style="font-size:2.8rem; color:#fb7185; text-shadow:0 0 16px #14b8a6cc;"></i>
+        </span>
+      </div>
     </div>
   </section>
 
@@ -694,6 +699,11 @@ if(contactForm){
   <button class="footer-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:24px; right:24px; background:linear-gradient(120deg,#14b8a6 0%,#fb7185 100%); color:#fff; border:none; border-radius:50%; box-shadow:0 2px 16px #14b8a655; width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:999; opacity:0.85; transition:background 0.2s, box-shadow 0.2s, opacity 0.2s;"><i class="fas fa-arrow-up"></i></button>
 </footer>
 <style>
+@keyframes pulseDown {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  60% { transform: translateY(12px) scale(1.15); opacity: 0.85; }
+  100% { transform: translateY(24px) scale(1.08); opacity: 0.7; }
+}
 /* Removed dark mode styles */
 .animated-profile {
   transition: box-shadow 0.4s, transform 0.4s;
