@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>Calvin Gutsa | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -13,17 +16,18 @@
   <div class="quote-banner">"When code breaks, creativity begins."</div>
 
   <!-- Navigation Bar -->
-  <nav class="main-nav">
-    <a href="#">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank">Resume</a>
+  <nav class="main-nav glass-nav" aria-label="Main Navigation">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About Me</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
   </nav>
 
   <!-- Intro Header -->
   <header class="hero-header futuristic-header">
-    <div class="glass-card">
+    <div class="hero-bg-animated"></div>
+    <div class="glass-card" aria-label="Landing Section">
       <h1 class="futuristic-title">Calvin Gutsa</h1>
       <p class="futuristic-subtitle" style="color:#fff; text-shadow:0 0 8px #38bdf8,0 0 2px #a855f7;">Software Engineer Intern &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; Innovative Solutions Builder</p>
       <span class="tagline">Building the future, one idea at a time.</span>
@@ -44,8 +48,8 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about">
-    <div class="about-card glass-card">
+  <section id="about" aria-label="About Me">
+    <div class="about-card glass-card about-animate">
       <div class="about-image">
         <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa" />
       </div>
@@ -70,21 +74,30 @@
       </h2>
     </div>
     <div class="projects-grid container">
-      <div class="project-card glass-card">
+      <div class="project-card glass-card project-animate">
         <img src="img/ai-hand.jpg" alt="AI Hand Illustration" />
         <h3>USSD Food Delivery Platform</h3>
         <p>Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
       </div>
-      <div class="project-card glass-card">
+      <div class="project-card glass-card project-animate">
         <img src="img/museum-of-the-future.jpg" alt="Toddler Safety Device" />
         <h3>Safety Device for Toddlers</h3>
         <p>Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
       </div>
-      <div class="project-card glass-card">
+      <div class="project-card glass-card project-animate">
         <img src="img/futuristic-lights.jpg" alt="Novelty Mood Research" />
         <h3>Interactive Chatbot for Children</h3>
         <p>Exploring how new experiences affect memory, affective states, and learning behavior.</p>
       </div>
+      <script>
+        // Staggered animation for project cards
+        document.addEventListener('DOMContentLoaded', function() {
+          const cards = document.querySelectorAll('.project-animate');
+          cards.forEach((card, i) => {
+            card.style.animationDelay = `${0.2 + i * 0.25}s`;
+          });
+        });
+      </script>
     </div>
   </section>
 
