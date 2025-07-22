@@ -33,19 +33,20 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
-  let current = '';
+  let currentSection = '';
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
+
     if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute('id');
+      currentSection = section.getAttribute('id');
     }
   });
 
   navLinks.forEach(link => {
     link.classList.remove('link-active');
-    if (link.getAttribute('href').includes(current)) {
+    if (link.getAttribute('href').includes(currentSection)) {
       link.classList.add('link-active');
     }
   });

@@ -70,7 +70,8 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a.link-active {
+nav ul li a.link-active,
+nav ul li a.active {
   color: #a855f7;
   border-bottom: 2px solid #a855f7;
 }
@@ -141,6 +142,47 @@ section h2 {
   max-width: 500px;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+
+/* === Portfolio (Projects) Page === */
+.portfolio-section {
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #cccccc;
 }
 
 /* === Footer === */
