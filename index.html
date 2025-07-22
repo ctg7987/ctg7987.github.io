@@ -20,17 +20,17 @@
       <!-- === Navigation Bar === -->
       <nav>
         <div class="container">
-          <a href="index.html" class="brand">Calvin Gutsa</a>
+          <a href="#home" class="brand">Calvin Gutsa</a>
           <ul>
-            <li><a href="index.html" class="link-active">Home</a></li>
-            <li><a href="photo.html">Projects</a></li>
+            <li><a href="#home" class="link-active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About Me</a></li>
           </ul>
         </div>
       </nav>
 
       <!-- === Slider / Intro === -->
-      <div class="header-body">
+      <div class="header-body" id="home">
         <div class="container">
           <div class="slider">
             <h1 class="slider-count">/01</h1>
@@ -93,6 +93,34 @@
     </div>
   </section>
 
+  <!-- === Projects Section === -->
+  <section id="projects" class="portfolio-section">
+    <div class="container">
+      <h1>🛠 Projects</h1>
+      <p>Here are some projects and research initiatives I've worked on.</p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="img/web/ai-hand.jpg" alt="AI Hand Illustration" />
+          <h3>USSD Food Delivery Platform</h3>
+          <p>Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="img/web/museum-of-the-future.jpg" alt="Toddler Safety Device" />
+          <h3>Safety Device for Toddlers</h3>
+          <p>Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="img/web/futuristic-lights.jpg" alt="Novelty Mood Research" />
+          <h3>Novelty & Mood Research</h3>
+          <p>Exploring how new experiences affect memory, affective states, and learning behavior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- === Footer === -->
   <footer class="footer">
     <div class="container">
@@ -100,8 +128,8 @@
         <div class="footer-col">
           <h4>Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="photo.html">Projects</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About Me</a></li>
           </ul>
         </div>
@@ -121,6 +149,7 @@
           </div>
         </div>
       </div>
+      <p style="text-align: center; margin-top: 20px;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
     </div>
   </footer>
 </body>
