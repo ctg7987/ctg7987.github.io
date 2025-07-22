@@ -1,3 +1,6 @@
+h1.about-singleline {
+  white-space: nowrap !important;
+}
 .main-nav {
   display: flex;
   flex-direction: row;
