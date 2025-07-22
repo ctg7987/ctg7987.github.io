@@ -1,3 +1,53 @@
+/* FIX NAVBAR PADDING AND LAYOUT */
+.main-nav {
+  padding: 0.5rem 2rem;
+  height: auto;
+  align-items: center;
+}
+
+.main-nav .nav-link {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+}
+
+/* REMOVE PINK WAVE BACKGROUNDS */
+.pink-section,
+.pink-stripe,
+.wavy-bg {
+  display: none !important;
+}
+
+/* REMOVE EMOJIS IN HEADINGS UNDER PROJECTS */
+.project-title::before,
+.project-title::after {
+  content: none !important;
+}
+
+/* MAKE VIDEOS FULLY VISIBLE */
+video.main-video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* GENERAL POLISH */
+.card,
+.about-card,
+.contact-card,
+.footer-glow {
+  border-radius: 1rem !important;
+  box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.10) !important;
+}
+
+button,
+input[type="submit"] {
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue&family=Fredoka&display=swap');
 
 /* === Global Styles === */
