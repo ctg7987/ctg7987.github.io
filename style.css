@@ -1,801 +1,315 @@
-/* === Smooth Scroll === */
+/* === Global Styles === */
+
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 * {
-  font-family: 'Comic Neue', cursive;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-/* === Button Hover Transitions === */
-button,
-a.button,
-input[type="submit"] {
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 6px;
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* === Quote Box === */
+.quote-box {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-style: italic;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  margin-top: 150px;
+  color: white;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* === Revamped Navbar === */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 20px auto;
+  width: fit-content;
   font-weight: bold;
+}
+nav a {
+  color: white;
+  text-decoration: none;
   font-size: 1rem;
 }
-
-a.button:hover,
-input[type="submit"]:hover {
-  background: #38bdf8;
-  color: #0f0f0f;
-  transform: translateY(-2px);
+nav a:hover {
+  color: #00ffff;
 }
 
-/* === Reveal Animations via Keyframes === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* === Container === */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }
 
+/* === Header & Navigation === */
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.link-active,
+nav ul li a.active {
+  color: #a855f7;
+  border-bottom: 2px solid #a855f7;
+}
+
+/* === Intro Section === */
+.header-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* === Sections === */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* === About Section === */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 15px;
+  border: 2px solid #38bdf8;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+/* === News Section === */
+.news-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.news-item img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* === Portfolio (Projects) Page === */
+.portfolio-section {
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #cccccc;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #111111;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #ffffff;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #38bdf8;
+}
+
+/* === Reveal Animations === */
 .reveal {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal.visible {
   opacity: 1;
-  visibility: visible;
+  transform: translateY(0);
 }
 
-body {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%), url('img/futuristic-lights.jpg') no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  color: #222;
-  line-height: 1.6;
-}
-.quote-banner {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.7);
-  color: #fff;
-  font-style: italic;
-  font-size: 1.2rem;
-  padding: 16px 32px;
-  border-radius: 30px;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-  margin-top: 12px;
-  letter-spacing: 1px;
-}
-/* === Contact Form Styling === */
-.contact-section {
-  padding: 80px 20px;
-  background-color: #121212;
-  color: #ffffff;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #38bdf8;
-}
-
-.contact-form {
-  max-width: 700px;
-  margin: auto;
-  background-color: #1a1a1a;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
-}
-
-.contact-form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: #cccccc;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #333;
-  background-color: #0f0f0f;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 5px rgba(168, 85, 247, 0.4);
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 25px;
-}
-
-.contact-form button,
-.contact-form input[type="submit"] {
-  background-color: #a855f7;
-  color: #ffffff;
-  border: none;
-  padding: 14px 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-form button:hover,
-.contact-form input[type="submit"]:hover {
-  background-color: #38bdf8;
-  transform: scale(1.05);
-}
-
-/* === Form Validation States === */
-input:invalid,
-textarea:invalid {
-  border-color: #ff4d4d;
-}
-
-input:valid,
-textarea:valid {
-  border-color: #38bdf8;
-}
-
-/* === Contact Success Message === */
-.form-message {
-  margin-top: 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #38bdf8;
-}
-
-/* === Responsive Contact Form === */
+/* === Responsive === */
 @media (max-width: 768px) {
-  .contact-form {
-    padding: 20px;
-  }
-}
-/* === UI Components === */
-
-/* === Card Component === */
-.card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 24px rgba(56, 189, 248, 0.3);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #38bdf8;
-}
-
-.card p {
-  color: #ccc;
-}
-
-/* === Badge === */
-.badge {
-  display: inline-block;
-  padding: 5px 12px;
-  font-size: 0.75rem;
-  color: #fff;
-  background: linear-gradient(to right, #38bdf8, #a855f7);
-  border-radius: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* === Tooltip === */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  width: 180px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 8px 12px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 99;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* === Modal === */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(15, 15, 15, 0.9);
-}
-
-.modal-content {
-  background-color: #1e1e1e;
-  margin: 10% auto;
-  padding: 30px;
-  border: 1px solid #444;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  color: #fff;
-  position: relative;
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
-  animation: fadeInUp 0.5s ease;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  color: #ccc;
-  cursor: pointer;
-}
-
-.close-modal:hover {
-  color: #fff;
-}
-
-/* === Modal Animation === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* === Responsive Design === */
-
-/* XL Desktops (>= 1200px) */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-}
-
-/* Large Screens (1000px–1199px) */
-@media (max-width: 1199px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .about-text {
-    max-width: 500px;
-  }
-
-  .project-card {
-    padding: 16px;
-  }
-}
-
-/* Medium Devices (768px–999px) */
-@media (max-width: 999px) {
-  nav {
+  .about-content {
     flex-direction: column;
-    gap: 10px;
-    border-radius: 0;
-    padding: 15px;
-    width: 100%;
   }
 
   nav ul {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    display: none;
   }
 
-  .hero {
-    margin-top: 100px;
-    padding: 20px;
+  nav ul.active {
+    display: flex;
   }
 
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-image img {
-    width: 80%;
-    max-width: 250px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .project-card {
-    padding: 15px;
-  }
-
-  .modal-content {
-    padding: 20px;
-    width: 90%;
-  }
-}
-
-/* Small Devices (576px–767px) */
-@media (max-width: 767px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .about-text {
-    padding: 0 10px;
-  }
-
-  .project-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-card p {
-    font-size: 0.95rem;
-  }
-
-  .footer h4 {
-    font-size: 1rem;
-  }
-
-  .tooltip .tooltip-text {
-    width: 150px;
-    font-size: 0.85rem;
-  }
-}
-
-/* Extra Small Devices (<= 400px) */
-@media (max-width: 400px) {
-  html {
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .container {
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-
-  .quote-box {
-  display: none; /* replaced by .quote-banner */
-}
-/* Removed stray text-align: center; line to fix syntax error */
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-family: 'Comic Neue', cursive;
-  letter-spacing: 2px;
-}
-.hero p {
-  font-size: 1.2rem;
-  font-family: 'Comic Neue', cursive;
-}
-.container {
-  background: rgba(255,255,255,0.85);
-  border-radius: 999px;
-  padding: 16px 40px;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  margin: 60px auto 32px auto;
-  width: fit-content;
-  font-weight: bold;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-nav a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 8px 24px;
-  border-radius: 999px;
-  transition: background 0.2s, color 0.2s;
-  font-family: 'Comic Neue', cursive;
-}
-nav a:hover {
-  background: #a8edea;
-  color: #a855f7;
-}
-.project-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 32px 24px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: none;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-.project-card h3 {
-  color: #a855f7;
-  margin-bottom: 10px;
-  font-family: 'Comic Neue', cursive;
-}
-.project-card p {
-  color: #222;
-  font-family: 'Comic Neue', cursive;
-}
-/* Removed stray 'padding: 80px 0;' line to fix syntax error */
-/* Removed stray 'background: rgba(255,255,255,0.7);' line to fix syntax error */
-.quote-box {
-  border-radius: 30px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-
-/* If the font-size and other properties are meant for a selector, add them to the correct block. 
-   Otherwise, remove these stray lines to fix the syntax error. */
-
-  .modal-content {
-    margin: 20% auto;
-  }
-
-  .footer ul li a {
-    font-size: 0.85rem;
-  }
-
-  .social-links a {
-    font-size: 18px;
-    margin: 0 6px;
-  }
-}
-/* === Contact Form === */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
-}
-
-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #38bdf8;
-}
-
-form .form-group {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-form label {
-  display: block;
-  margin-bottom: 6px;
-  color: #cccccc;
-  font-weight: 500;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  background: #0f0f0f;
-  color: #ffffff;
-  border: 1px solid #333;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #38bdf8;
-  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
-}
-
-form textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* Error message */
-form .error-message {
-  color: #f87171;
-  font-size: 0.875rem;
-  margin-top: 5px;
-  display: none;
-}
-
-/* Valid state */
-form input.valid,
-form textarea.valid {
-  border-color: #34d399;
-}
-
-form .error-message.show {
-  display: block;
-}
-
-/* === Submit Button === */
-form button {
-  width: 100%;
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s;
-}
-
-form button:hover {
-  transform: scale(1.03);
-  background: linear-gradient(90deg, #22d3ee, #c084fc);
-}
-
-form button:active {
-  transform: scale(0.98);
-}
-
-/* === Success Message (optional) === */
-.success-message {
-  background-color: #10b981;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-/* === Cards === */
-.card {
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid #333;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
-}
-
-/* === Badges === */
-.badge {
-  display: inline-block;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: white;
-  background: #a855f7;
-  border-radius: 50px;
-  margin: 4px;
-}
-
-/* Alternate badge styles */
-.badge-blue { background: #38bdf8; }
-.badge-green { background: #34d399; }
-.badge-yellow { background: #facc15; }
-
-/* === Tooltips === */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: max-content;
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 6px 10px;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* top of element */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* === Modal === */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  color: white;
-  position: relative;
-  animation: fadeIn 0.5s ease;
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to   { opacity: 1; transform: scale(1); }
-}
-/* === Dark Mode === */
-body.dark-mode {
-  background-color: #121212;
-  color: #e4e4e4;
-}
-
-body.dark-mode nav {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .card {
-  background-color: #1e1e1e;
-  border-color: #333;
-}
-
-body.dark-mode .project-card {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .footer {
-  background-color: #0d0d0d;
-}
-
-body.dark-mode .main-video {
-  filter: brightness(0.6);
-}
-
-/* === Dark Mode Toggle Button === */
-#dark-mode-toggle {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  transition: background-color 0.3s;
-  z-index: 999;
-}
-
-#dark-mode-toggle:hover {
-  background-color: #555;
-}
-
-/* === Responsive Design (5 Breakpoints) === */
-
-/* Extra Large (XL) */
-@media (max-width: 1400px) {
-  .container { padding: 0 40px; }
-}
-
-/* Large (LG) */
-@media (max-width: 1200px) {
-  .hero h1 { font-size: 2.5rem; }
-  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-}
-
-/* Medium (MD) */
-@media (max-width: 992px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .header-body { padding: 40px 0; }
-  .about-content { flex-direction: column; text-align: center; }
-}
-
-/* Small (SM) */
-@media (max-width: 768px) {
-  .quote-box {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .card, .project-card {
-    padding: 15px;
-  }
-}
-
-/* Extra Small (XS) */
-@media (max-width: 480px) {
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .title { font-size: 1.8rem; }
-  #dark-mode-toggle {
-    padding: 8px 10px;
-    font-size: 1rem;
-    bottom: 20px;
-    right: 20px;
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
   }
 }
