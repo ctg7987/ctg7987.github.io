@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calvin Gutsa | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 
 <body>
-  <div class="quote-banner">"When code breaks, creativity begins."</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <section class="hero">
-    <h1>Welcome to Calvin’s Portfolio!</h1>
-    <p>Engineer • Researcher • Builder</p>
-  </section>
+  <!-- === Background Video & Header === -->
   <header>
     <video id="video-background" autoplay muted loop class="main-video">
       <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
     </video>
+
     <main>
+      <!-- === Navigation Bar === -->
+      <nav>
+        <div class="container">
+          <a href="index.html" class="brand">Calvin Gutsa</a>
+          <ul>
+            <li><a href="index.html" class="link-active">Home</a></li>
+            <li><a href="photo.html">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- === Slider / Intro === -->
+      <div class="header-body">
+        <div class="container">
+          <div class="slider">
+            <h1 class="slider-count">/01</h1>
+            <div class="progress"><div></div></div>
+            <p class="slider-cntrl active">Chatbot Systems</p>
+            <p class="slider-cntrl active">Embedded Devices</p>
+            <p class="slider-cntrl active">Behavioral Research</p>
+          </div>
+
+          <div>
             <h1 class="title">Building with Purpose</h1>
             <p>
               Creating systems that bridge
@@ -41,6 +55,7 @@
           </div>
         </div>
 
+        <!-- === Bottom Section with Highlights === -->
         <div class="header-bottom">
           <div class="container">
             <div class="item">
@@ -51,10 +66,7 @@
             </div>
             <div class="item">
               <h4>News</h4>
-              <small>
-                Launching a new
-                <span class="sub-title">open-source chatbot interface</span>
-              </small>
+              <small>Launching a new <span class="sub-title">open-source chatbot interface</span></small>
               <a href="#news">Read More</a>
             </div>
           </div>
@@ -63,7 +75,7 @@
     </main>
   </header>
 
-  <!-- About Section -->
+  <!-- === About Me Section === -->
   <section id="about">
     <div class="main">
       <div class="about-content">
@@ -81,7 +93,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- === Footer === -->
   <footer class="footer">
     <div class="container">
       <div class="row">
