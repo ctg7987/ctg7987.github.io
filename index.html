@@ -9,6 +9,87 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* Parallax backgrounds for dividers */
+    .parallax-divider {
+      width: 100vw;
+      height: 120px;
+      background: url('img/futuristic-lights.jpg') center center fixed;
+      background-size: cover;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: parallaxMove 12s linear infinite alternate;
+    }
+    @keyframes parallaxMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    /* Animated gradient overlay for hero */
+    .animated-gradient {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(120deg, #a855f7 0%, #38bdf8 50%, #fed6e3 100%);
+      opacity: 0.5;
+      z-index: 0;
+      animation: gradientMove 8s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    /* Section fade-in transitions */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(.23,1.01,.32,1), transform 1s cubic-bezier(.23,1.01,.32,1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Navbar shrink on scroll */
+    .glass-nav.shrunk {
+      padding: 8px 24px !important;
+      font-size: 0.95rem !important;
+      box-shadow: 0 2px 12px #14b8a655;
+      background: rgba(255,255,255,0.12);
+    }
+    /* Project card hover effects */
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .project-card:hover, .project-card:focus {
+      transform: translateY(-8px) scale(1.04) rotate(-1.5deg);
+      box-shadow: 0 8px 32px #38bdf8cc, 0 0 32px #a855f7aa;
+      background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+      outline: none;
+    }
+    /* Animated hero intro */
+    .hero-intro {
+      font-size: 2.2rem;
+      font-family: 'Caveat', cursive;
+      color: #fb7185;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+      animation: introFade 2.5s cubic-bezier(.23,1.01,.32,1);
+    }
+    @keyframes introFade {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: none; }
+    }
+    /* Responsive improvements */
+    @media (max-width: 900px) {
+      .landing-content { padding-top: 80px !important; }
+      .about-content { flex-direction: column !important; gap: 24px !important; }
+      .project-card { padding: 18px 8px !important; }
+    }
+  </style>
+  <style>
     body {
       background: url('img/ai-hand.jpg') no-repeat center center fixed;
       background-size: cover;
@@ -209,11 +290,21 @@
     <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
     <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link" aria-label="Resume">Resume</a>
   </nav>
+  <script>
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('.glass-nav');
+      if(window.scrollY > 60) nav.classList.add('shrunk');
+      else nav.classList.remove('shrunk');
+    });
+  </script>
 
   <!-- Landing (Home) Section -->
-  <section id="home" class="landing-section fade-in" style="position:relative; min-height:65vh; width:100vw; display:flex; align-items:center; justify-content:center; background:url('img/ai-hand.jpg') no-repeat center center fixed; background-size:cover;">
+  <section id="home" class="landing-section fade-in" style="position:relative; min-height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; background:url('img/ai-hand.jpg') no-repeat center center fixed; background-size:cover;">
+    <div class="animated-gradient"></div>
     <div class="landing-overlay" style="position:absolute; inset:0; width:100vw; height:100vh; background:linear-gradient(120deg,rgba(17,17,17,0.55) 0%,rgba(20,184,166,0.18) 100%); z-index:1;"></div>
     <div class="landing-content" style="position:relative; z-index:2; text-align:center; width:100vw; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top:110px;">
+      <div class="hero-intro">Welcome to my portfolio!</div>
       <h1 style="font-size:clamp(2.5rem,6vw,4rem); font-family:'Fredoka', Arial, sans-serif; font-weight:700; color:#fff; margin-bottom:24px;">Building everyday tools that make life easier, one problem at a time.</h1>
       <p style="font-size:clamp(1.2rem,3vw,2rem); font-family:'Fredoka', Arial, sans-serif; color:#e0f7fa; margin-bottom:18px; max-width:700px;">Welcome. I build software for everyday impact. I care about real-world problems and love seeing people thrive.</p>
       <!-- Down Arrow Scroll Indicator -->
