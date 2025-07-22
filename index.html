@@ -438,6 +438,7 @@
         dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){slideIndex=i;scrollToSlide(slideIndex);}});
       });
       // Autoplay with pause on hover
+      /*
       let autoSlide = setInterval(()=>{
         slideIndex = (slideIndex+1)%3;
         scrollToSlide(slideIndex);
@@ -449,6 +450,7 @@
           scrollToSlide(slideIndex);
         },5000);
       });
+      */
       // Arrow bounce animation
       [leftArrow,rightArrow].forEach(arrow=>{
         arrow.addEventListener('mouseenter',()=>arrow.style.transform='translateY(-50%) scale(1.15)');
