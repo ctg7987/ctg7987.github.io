@@ -399,41 +399,48 @@
       <div style="position:relative; z-index:1; padding:24px; border-radius:18px;">
         <h2 class="section-title" style="font-size:clamp(2.2rem,4vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin:48px 0 36px 0; text-align:center; letter-spacing:1px;">Projects</h2>
         <div class="carousel-wrapper" style="position:relative; width:100%; max-width:900px; margin:0 auto;">
-          <button class="carousel-arrow left" aria-label="Previous" style="position:absolute; left:0; top:50%; transform:translateY(-50%); background:#14b8a6; color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:2rem; z-index:2; cursor:pointer; opacity:0.85;">&#8592;</button>
-          <div class="carousel" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; width:100%;">
+          <button class="carousel-arrow left" aria-label="Previous project" tabindex="0" style="position:absolute; left:-60px; top:50%; transform:translateY(-50%); background:#14b8a6; color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:2rem; z-index:2; cursor:pointer; opacity:0.85; transition:transform 0.2s; display:flex; align-items:center; justify-content:center;"><i class="fas fa-arrow-left"></i></button>
+          <div class="carousel" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; width:100%; gap:32px; padding-bottom:32px;">
             <!-- Slide 1 -->
-            <div class="carousel-slide project-card" style="min-width:220px; max-width:260px; flex:0 0 100%; margin:0 16px; background:#fff; border-radius:16px; padding:22px 12px; text-align:center; transition:transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow:0 2px 12px rgba(0,0,0,0.10); cursor:pointer; scroll-snap-align:center;">
-              <img src="img/ai-hand.jpg" alt="Neighborhood Helper App" style="width:100%; border-radius:12px; margin-bottom:20px;" />
-              <h3 style="color:#a855f7; margin-bottom:12px; font-family:'Fredoka', Arial, sans-serif; font-size:1.15rem;">Neighborhood Helper App</h3>
-              <p style="color:#222; font-family:'Fredoka', Arial, sans-serif; font-size:0.95rem;">A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.</p>
+            <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:#fff; border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 2px 16px rgba(20,184,166,0.10); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+              <img src="img/ai-hand.jpg" alt="Neighborhood Helper App" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem;">Neighborhood Helper App</h3>
+              <p style="color:#222; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:0;">A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.</p>
             </div>
             <!-- Slide 2 -->
-            <div class="carousel-slide project-card" style="min-width:320px; max-width:400px; flex:0 0 100%; margin:0 24px; background:#fff; border-radius:20px; padding:40px 32px; text-align:center; transition:transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow:0 4px 24px rgba(0,0,0,0.10); cursor:pointer; scroll-snap-align:center;">
-              <img src="img/museum-of-the-future.jpg" alt="Travel Journal Platform" style="width:100%; border-radius:12px; margin-bottom:20px;" />
-              <h3 style="color:#fb7185; margin-bottom:12px; font-family:'Fredoka', Arial, sans-serif; font-size:1.15rem;">Travel Journal Platform</h3>
-              <p style="color:#222; font-family:'Fredoka', Arial, sans-serif; font-size:0.95rem;">A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.</p>
+            <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:#fff; border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 2px 16px rgba(20,184,166,0.10); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+              <img src="img/museum-of-the-future.jpg" alt="Travel Journal Platform" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem;">Travel Journal Platform</h3>
+              <p style="color:#222; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:0;">A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.</p>
             </div>
             <!-- Slide 3 -->
-            <div class="carousel-slide project-card" style="min-width:320px; max-width:400px; flex:0 0 100%; margin:0 24px; background:#fff; border-radius:20px; padding:40px 32px; text-align:center; transition:transform 0.3s, box-shadow 0.3s, background 0.3s; box-shadow:0 4px 24px rgba(0,0,0,0.10); cursor:pointer; scroll-snap-align:center;">
-              <img src="img/futuristic-lights.jpg" alt="Smart Reminder System" style="width:100%; border-radius:12px; margin-bottom:20px;" />
-              <h3 style="color:#38bdf8; margin-bottom:12px; font-family:'Fredoka', Arial, sans-serif; font-size:1.15rem;">Smart Reminder System</h3>
-              <p style="color:#222; font-family:'Fredoka', Arial, sans-serif; font-size:0.95rem;">A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.</p>
+            <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:#fff; border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 2px 16px rgba(20,184,166,0.10); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+              <img src="img/futuristic-lights.jpg" alt="Smart Reminder System" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem;">Smart Reminder System</h3>
+              <p style="color:#222; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:0;">A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.</p>
             </div>
           </div>
-          <button class="carousel-arrow right" aria-label="Next" style="position:absolute; right:0; top:50%; transform:translateY(-50%); background:#14b8a6; color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:2rem; z-index:2; cursor:pointer; opacity:0.85;">&#8594;</button>
+          <button class="carousel-arrow right" aria-label="Next project" tabindex="0" style="position:absolute; right:-60px; top:50%; transform:translateY(-50%); background:#14b8a6; color:#fff; border:none; border-radius:50%; width:48px; height:48px; font-size:2rem; z-index:2; cursor:pointer; opacity:0.85; transition:transform 0.2s; display:flex; align-items:center; justify-content:center;"><i class="fas fa-arrow-right"></i></button>
+          <div class="carousel-dots" style="width:100%; display:flex; justify-content:center; align-items:center; gap:12px; margin-top:18px;">
+            <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
+            <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
+            <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
+          </div>
         </div>
       </div>
     </div>
     <script>
-      // Carousel navigation
+      // Carousel navigation and accessibility
       const carousel = document.querySelector('.carousel');
       const leftArrow = document.querySelector('.carousel-arrow.left');
       const rightArrow = document.querySelector('.carousel-arrow.right');
+      const dots = document.querySelectorAll('.carousel-dots .dot');
       let slideIndex = 0;
       function scrollToSlide(idx) {
         const slides = document.querySelectorAll('.carousel-slide');
         if (slides[idx]) {
           slides[idx].scrollIntoView({behavior:'smooth',inline:'center'});
+          dots.forEach((dot,i)=>dot.style.opacity=i===idx?"1":"0.5");
         }
       }
       leftArrow.addEventListener('click',()=>{
@@ -444,9 +451,117 @@
         slideIndex = Math.min(2,slideIndex+1);
         scrollToSlide(slideIndex);
       });
+      // Keyboard navigation
+      leftArrow.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){leftArrow.click();}});
+      rightArrow.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){rightArrow.click();}});
+      // Dots navigation
+      dots.forEach((dot,i)=>{
+        dot.addEventListener('click',()=>{slideIndex=i;scrollToSlide(slideIndex);});
+        dot.setAttribute('tabindex','0');
+        dot.setAttribute('aria-label',`Go to slide ${i+1}`);
+        dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){slideIndex=i;scrollToSlide(slideIndex);}});
+      });
+      // Autoplay with pause on hover
+      let autoSlide = setInterval(()=>{
+        slideIndex = (slideIndex+1)%3;
+        scrollToSlide(slideIndex);
+      },5000);
+      carousel.addEventListener('mouseenter',()=>clearInterval(autoSlide));
+      carousel.addEventListener('mouseleave',()=>{
+        autoSlide = setInterval(()=>{
+          slideIndex = (slideIndex+1)%3;
+          scrollToSlide(slideIndex);
+        },5000);
+      });
+      // Arrow bounce animation
+      [leftArrow,rightArrow].forEach(arrow=>{
+        arrow.addEventListener('mouseenter',()=>arrow.style.transform='translateY(-50%) scale(1.15)');
+        arrow.addEventListener('mouseleave',()=>arrow.style.transform='translateY(-50%)');
+      });
+      // Initial dot highlight
+      scrollToSlide(slideIndex);
+      // Responsive: stack cards vertically on mobile
+      function handleResize(){
+        if(window.innerWidth<700){
+          carousel.style.flexDirection='column';
+          carousel.style.alignItems='center';
+          carousel.style.gap='32px';
+        }else{
+          carousel.style.flexDirection='row';
+          carousel.style.alignItems='unset';
+          carousel.style.gap='32px';
+        }
+      }
+      window.addEventListener('resize',handleResize);
+      handleResize();
     </script>
   </section>
-
+  <style>
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(20,184,166,0.10);
+  padding: 32px 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 260px;
+  max-width: 260px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.project-card h3 {
+  color: #14b8a6;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+.project-card p {
+  color: #222;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.project-card:hover, .project-card:focus {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 8px 32px #38bdf8cc, 0 0 32px #14b8a6aa;
+  outline: none;
+}
+.carousel-arrow {
+  transition: transform 0.2s;
+}
+.carousel-dots .dot {
+  cursor: pointer;
+  outline: none;
+}
+@media (max-width: 700px) {
+  .carousel {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+  }
+  .carousel-arrow.left {
+    left: 0 !important;
+    top: auto !important;
+    bottom: -60px !important;
+    transform: none !important;
+  }
+  .carousel-arrow.right {
+    right: 0 !important;
+    top: auto !important;
+    bottom: -60px !important;
+    transform: none !important;
+  }
+}
+</style>
 <!-- CONTACT SECTION -->
 <section id="contact" class="parallax-section fade-in" style="background-image:url('img/ai-hand.jpg'); margin-top:128px; margin-bottom:128px;">
   <div class="contact-card" style="position:relative; z-index:2; background:none; border-radius:0; box-shadow:none; padding:48px 32px; max-width:520px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center;">
