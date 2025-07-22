@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="parallax.js" defer></script>
 </head>
 <body>
 
@@ -20,26 +21,19 @@
     <a href="#projects" class="nav-link" aria-label="Projects">Projects</a>
     <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
     <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link" aria-label="Resume">Resume</a>
+    <a href="https://github.com/ctg7987" target="_blank" class="nav-link" aria-label="GitHub">GitHub</a>
+    <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" class="nav-link" aria-label="LinkedIn">LinkedIn</a>
   </nav>
 
   <!-- Intro Header -->
   <header class="hero-header futuristic-header">
     <div class="hero-bg-animated"></div>
     <div class="hero-fullscreen">
-      <video id="video-background" autoplay muted loop class="main-video" style="position:absolute; top:0; left:0; width:100vw; height:100vh; object-fit:cover; z-index:-1; border-radius:0; opacity:0.22;">
-        <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <video id="video-background" autoplay muted loop class="main-video" style="position:absolute; top:0; left:0; width:100vw; height:100vh; object-fit:cover; z-index:-1; border-radius:0; opacity:0.22;"><source src="vid/tech-globe-vid.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
       <div class="hero-content" style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh;">
-        <h1 class="futuristic-title" style="font-size:4rem; margin-bottom:18px; text-align:center;">
-          <span style="font-size:3.2rem;">👋</span> Calvin Gutsa
-        </h1>
-        <p class="futuristic-subtitle" style="color:#fff; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; font-size:2rem; margin-bottom:18px;">
-          Software Engineering Intern &nbsp;|&nbsp; AI/ML Researcher &nbsp;|&nbsp; Innovative Solutions Developer
-        </p>
-        <span class="tagline" style="background:rgba(0,0,0,0.45); color:#fff; padding:12px 32px; border-radius:18px; font-size:1.5rem; margin-top:12px; box-shadow:0 2px 16px #14b8a6aa;">
-          🚀 Building the future, one idea at a time.
-        </span>
+        <h1 class="futuristic-title" style="font-size:4rem; margin-bottom:18px; text-align:center;">Building everyday tools that make life easier — one problem at a time.</h1>
+        <p class="futuristic-subtitle" style="color:#fff; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; font-size:2rem; margin-bottom:18px;">From global trends to local needs, I design software with purpose.</p>
+        <span class="tagline" style="background:rgba(0,0,0,0.45); color:#fff; padding:12px 32px; border-radius:18px; font-size:1.5rem; margin-top:12px; box-shadow:0 2px 16px #14b8a6aa;">Software for everyday impact</span>
       </div>
     </div>
   </header>
@@ -49,92 +43,84 @@
   </div>
 
   <!-- Welcome Section -->
-  <section class="welcome-card" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/futuristic-lights.jpg') center/cover no-repeat; min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-    <div class="welcome-quote-overlay" style="position:absolute; top:32px; left:50%; transform:translateX(-50%); background:rgba(17,17,17,0.65); color:#fff; padding:24px 40px; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa; font-size:1.5rem; font-family:'Caveat', 'Chewy', cursive; z-index:2; max-width:700px; text-align:center;">
-      "Creativity is intelligence having fun." <span style="font-size:2rem;">✨</span>
-    </div>
-    <h2 style="position:relative; z-index:2; margin-top:120px; font-size:2.8rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">Welcome to Calvin's Portfolio!</h2>
-    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:18px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">Hello and thank you for visiting! I'm Calvin, a tech person passionate about building software systems that matter, from children-focused chatbots to backend automation tools and research platforms.</p>
-    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:8px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">My work fuses engineering, behavioral science, and thoughtful design. You're welcome to explore and collaborate!</p>
+  <section class="welcome-card parallax-section fade-in" style="background-image:url('img/futuristic-lights.jpg');">
+    <h2 style="position:relative; z-index:2; margin-top:120px; font-size:2.8rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">Home</h2>
+    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:18px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">Welcome. I build software for everyday impact. I care about real-world problems and love seeing people thrive. My work is inspired by global news, local stories, and the simple things that make life better. I believe in building for humans, not just machines.</p>
+    <p style="position:relative; z-index:2; color:#fff; font-size:1.3rem; margin-top:8px; text-shadow:0 0 8px #14b8a6,0 0 2px #fb7185; max-width:700px;">Curiosity drives me. I travel, listen to music, and design systems that feel intuitive. Collaboration is at the heart of what I do.</p>
   </section>
 
   <!-- About Me Section -->
-  <section id="about" aria-label="About Me" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/museum-of-the-future.jpg') center/cover no-repeat; min-height:480px; display:flex; align-items:center; justify-content:center;">
-    <div class="about-quote-overlay" style="position:absolute; top:32px; left:50%; transform:translateX(-50%); background:rgba(17,17,17,0.65); color:#fff; padding:24px 40px; border-radius:24px; box-shadow:0 2px 24px #fb7185aa; font-size:1.5rem; font-family:'Caveat', 'Chewy', cursive; z-index:2; max-width:700px; text-align:center;">
-      "Engineering is the art of directing the great sources of power in nature for the use and convenience of man." <span style="font-size:2rem;">🌱</span>
-    </div>
+  <section id="about" aria-label="About Me" class="parallax-section fade-in" style="background-image:url('img/museum-of-the-future.jpg');">
     <div class="about-card glass-card about-animate" style="position:relative; z-index:2; background:rgba(255,255,255,0.85);">
       <div class="about-image">
         <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa" />
       </div>
       <div class="about-text">
         <h1 class="about-singleline">About Me</h1>
-        <h5>
-          <span class="about-icon"><i class="fas fa-cogs"></i></span> Engineer
-          <span class="about-icon"><i class="fas fa-flask"></i></span> Researcher
-          <span class="about-icon"><i class="fas fa-tools"></i></span> Builder
-        </h5>
-        <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
-        <p>Originally from Zimbabwe and currently based in the UAE, I have worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I am passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
+        <p>I started building things because I wanted to solve problems I saw around me. From my first lines of code to launching tools people use, I’ve always believed software should make life easier. I’m not just an engineer—I’m a traveler, a music lover, and someone who gets ideas from the world’s headlines and everyday moments. I thrive in teams where everyone grows. My story is about building with purpose, learning from others, and making tech that feels human.</p>
+        <p>Let’s connect if you care about practical solutions, creative design, or just want to chat about what’s next.</p>
+        <div style="margin-top:18px;">
+          <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" style="color:#14b8a6; font-weight:600; text-decoration:underline; margin-right:18px;">Resume</a>
+          <a href="https://github.com/ctg7987" target="_blank" style="color:#fb7185; font-weight:600; text-decoration:underline; margin-right:18px;">GitHub</a>
+          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank" style="color:#14b8a6; font-weight:600; text-decoration:underline;">LinkedIn</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/ai-hand.jpg') center/cover no-repeat; min-height:600px; padding:80px 0;">
-    <h2 class="section-title futuristic-title" style="margin-bottom:3.5rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">
-      <span class="futuristic-icon">🛠</span> Projects
-    </h2>
+  <section id="projects" class="parallax-section fade-in" style="background-image:url('img/ai-hand.jpg'); padding:80px 0;">
+    <h2 class="section-title futuristic-title" style="margin-bottom:3.5rem; color:#fff; text-shadow:0 0 12px #14b8a6,0 0 2px #fb7185;">Projects</h2>
     <div class="project-story">
       <!-- Project 1: Image Left, Text Right -->
       <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px;">
         <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
-          <img src="img/ai-hand.jpg" alt="AI Hand Illustration" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
+          <img src="img/ai-hand.jpg" alt="Project Illustration" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
         </div>
         <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
-          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">USSD Food Delivery Platform</h3>
-          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Offline food ordering system with EcoCash API integration, built in C++ for feature phones.</p>
+          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">Neighborhood Helper App</h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.</p>
         </div>
       </div>
       <!-- Project 2: Text Left, Image Right -->
       <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px; flex-direction:row-reverse;">
         <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
-          <img src="img/museum-of-the-future.jpg" alt="Toddler Safety Device" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #fb7185aa;" />
+          <img src="img/museum-of-the-future.jpg" alt="Project Illustration" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #fb7185aa;" />
         </div>
         <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
-          <h3 style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:12px;">Safety Device for Toddlers</h3>
-          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Embedded Arduino system that detects falls and sleep events with basic ML classification.</p>
+          <h3 style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:12px;">Travel Journal Platform</h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.</p>
         </div>
       </div>
       <!-- Project 3: Image Left, Text Right -->
       <div class="project-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; margin-bottom:60px;">
         <div class="project-img" style="flex:1; min-width:280px; max-width:420px; text-align:center;">
-          <img src="img/futuristic-lights.jpg" alt="Novelty Mood Research" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
+          <img src="img/futuristic-lights.jpg" alt="Project Illustration" style="width:100%; border-radius:24px; box-shadow:0 2px 24px #14b8a6aa;" />
         </div>
         <div class="project-desc" style="flex:1; min-width:280px; max-width:520px; padding:32px;">
-          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">Interactive Chatbot for Children</h3>
-          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">Exploring how new experiences affect memory, affective states, and learning behavior.</p>
+          <h3 style="font-size:2.2rem; color:#fb7185; font-family:'Chewy', cursive; margin-bottom:12px;">Smart Reminder System</h3>
+          <p style="font-size:1.25rem; color:#fff; font-family:'Fredoka', Arial, sans-serif;">A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.</p>
         </div>
       </div>
     </div>
   </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact" style="position:relative; width:100vw; left:50%; transform:translateX(-50%); background:url('img/futuristic-lights.jpg') center/cover no-repeat; min-height:480px; display:flex; align-items:center; justify-content:center;">
+<section id="contact" class="parallax-section fade-in" style="background-image:url('img/futuristic-lights.jpg');">
   <div class="contact-card" style="position:relative; z-index:2; background:rgba(255,255,255,0.85); border-radius:32px; box-shadow:0 2px 24px #14b8a6aa; padding:48px 32px; max-width:520px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center;">
     <form action="https://formsubmit.co/calvingutsa@gmail.com" method="POST" style="width:100%;">
       <input type="hidden" name="_captcha" value="false" />
       <div class="text-section" style="text-align:center; margin-bottom:18px;">
-        <h3 class="text-subtitle" style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:8px;">Contact Me! <span style="font-size:2rem;">✉️</span></h3>
-        <p style="font-size:1.15rem; color:#222; font-family:'Fredoka', Arial, sans-serif;">Let's connect and build something amazing together!</p>
+        <h3 class="text-subtitle" style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:8px;">Contact</h3>
+        <p style="font-size:1.15rem; color:#222; font-family:'Fredoka', Arial, sans-serif;">Reach out if you want to collaborate, share ideas, or just say hello. I’m always open to new conversations.</p>
       </div>
       <div class="form-group" style="width:100%; display:flex; flex-direction:column; gap:18px;">
         <label for="fname" style="font-family:'Fredoka', Arial, sans-serif; color:#14b8a6; font-size:1.1rem;">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required style="padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem;" aria-label="First Name" />
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required style="padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem;" aria-label="First Name" />
         <label for="lname" style="font-family:'Fredoka', Arial, sans-serif; color:#fb7185; font-size:1.1rem;">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required style="padding:12px; border-radius:1rem; border:1.5px solid #fb7185; font-size:1.1rem;" aria-label="Last Name" />
-        <label for="subject" style="font-family:'Fredoka', Arial, sans-serif; color:#222; font-size:1.1rem;">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px; padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem;" required aria-label="Subject"></textarea>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required style="padding:12px; border-radius:1rem; border:1.5px solid #fb7185; font-size:1.1rem;" aria-label="Last Name" />
+        <label for="subject" style="font-family:'Fredoka', Arial, sans-serif; color:#222; font-size:1.1rem;">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something" style="height:120px; padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem;" required aria-label="Subject"></textarea>
         <input type="submit" value="Submit" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); color:#fff; font-weight:600; border:none; border-radius:999px; padding:14px 0; font-size:1.2rem; cursor:pointer; box-shadow:none; transition:background 0.2s, transform 0.2s; margin-top:8px;" aria-label="Submit Contact Form" />
       </div>
     </form>
