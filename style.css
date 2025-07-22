@@ -66,6 +66,46 @@ nav a:hover {
 }
 
 /* === Hero Section === */
+.futuristic-header {
+  background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 4px 24px rgba(168,85,247,0.15);
+  margin: 60px auto 32px auto;
+  padding: 60px 20px 40px 20px;
+  position: relative;
+}
+.futuristic-title {
+  font-size: 3rem;
+  font-family: 'Comic Neue', cursive;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 12px #a855f7, 0 0 2px #38bdf8;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.futuristic-subtitle {
+  font-size: 1.3rem;
+  color: #a8edea;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.section-title.futuristic-title {
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 0 8px #38bdf8, 0 0 2px #a855f7;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.futuristic-icon {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 8px #38bdf8);
+}
 .hero {
   text-align: center;
   margin-top: 120px;
