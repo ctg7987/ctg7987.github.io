@@ -8,11 +8,104 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .nav-link, .icon-link, input[type="submit"] {
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .nav-link:hover, .icon-link:hover, input[type="submit"]:hover {
+      background: #e0f7fa;
+      color: #fb7185;
+      box-shadow: 0 2px 12px #14b8a655;
+      transform: translateY(-2px) scale(1.04);
+    }
+    .glass-card, .project-card, .contact-card, .about-card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 32px;
+      box-shadow: 0 2px 24px #14b8a633;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(120deg,#e0f7fa 0%,#fb7185 100%);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 2px 16px #14b8a655;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 999;
+      opacity: 0.85;
+      transition: background 0.2s, box-shadow 0.2s, opacity 0.2s;
+    }
+    .back-to-top:hover {
+      background: #fb7185;
+      box-shadow: 0 4px 24px #14b8a655;
+      opacity: 1;
+    }
+    @media (max-width: 900px) {
+      .hero-card, .about-card {
+        flex-direction: column !important;
+        gap: 24px !important;
+        padding: 32px 12px !important;
+      }
+      .hero-profile img {
+        width: 120px !important;
+        height: 120px !important;
+      }
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <script src="parallax.js" defer></script>
 </head>
 <body>
+  <button class="back-to-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;"><i class="fas fa-arrow-up"></i></button>
+<script>
+  // Fade-in animation on scroll
+  function revealOnScroll() {
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('DOMContentLoaded', revealOnScroll);
+  // Back to Top button show/hide
+  const backToTopBtn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = 'flex';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+</script>
 
   <!-- Navigation Bar -->
   <nav class="main-nav glass-nav" aria-label="Main Navigation">
@@ -31,6 +124,7 @@
       <section class="hero-card glass-card" style="width:100%; max-width:900px; margin:0 auto; padding:64px 32px; border-radius:32px; background:rgba(255,255,255,0.85); box-shadow:0 2px 24px #14b8a633; display:flex; flex-direction:row; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap;">
         <div class="hero-profile" style="flex:0 0 180px; display:flex; align-items:center; justify-content:center;">
           <img src="img/profile-pic.JPG" alt="Photo of Calvin Gutsa smiling outdoors" style="width:180px; height:180px; object-fit:cover; border-radius:50%; box-shadow:0 2px 16px #14b8a655; border:4px solid #e0f7fa;" />
+<!-- All images now have descriptive alt text for accessibility -->
         </div>
         <div class="hero-content" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;">
           <h1 class="futuristic-title" style="font-size:clamp(2.5rem,6vw,4rem); margin-bottom:24px; text-align:center; color:#14b8a6; font-family:'Chewy',cursive;">Building everyday tools that make life easier, one problem at a time.</h1>
