@@ -51,6 +51,8 @@ input[type="submit"]:hover {
   opacity: 1;
   visibility: visible;
 }
+
+body {
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%), url('img/futuristic-lights.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
@@ -118,9 +120,8 @@ input[type="submit"]:hover {
 }
 
 .contact-form input:focus,
-  opacity: 1;
-  visibility: visible;
-}
+.contact-form textarea:focus {
+  border-color: #38bdf8;
   box-shadow: 0 0 5px rgba(168, 85, 247, 0.4);
 }
 
@@ -420,17 +421,7 @@ textarea:valid {
   .quote-box {
   display: none; /* replaced by .quote-banner */
 }
-  text-align: center;
-  margin-top: 120px;
-  color: #222;
-  background: rgba(255,255,255,0.7);
-  border-radius: 30px;
-  padding: 60px 20px 40px 20px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
+/* Removed stray text-align: center; line to fix syntax error */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -441,6 +432,7 @@ textarea:valid {
   font-size: 1.2rem;
   font-family: 'Comic Neue', cursive;
 }
+.container {
   background: rgba(255,255,255,0.85);
   border-radius: 999px;
   padding: 16px 40px;
@@ -465,6 +457,7 @@ nav a:hover {
   background: #a8edea;
   color: #a855f7;
 }
+.project-card {
   background: #fff;
   border-radius: 20px;
   padding: 32px 24px;
@@ -482,19 +475,17 @@ nav a:hover {
   color: #222;
   font-family: 'Comic Neue', cursive;
 }
-  padding: 80px 0;
-  background: rgba(255,255,255,0.7);
+/* Removed stray 'padding: 80px 0;' line to fix syntax error */
+/* Removed stray 'background: rgba(255,255,255,0.7);' line to fix syntax error */
+.quote-box {
   border-radius: 30px;
   margin: 40px auto;
   max-width: 1000px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    border-radius: 12px;
-    top: 10px;
-    left: 10px;
-  }
+
+/* If the font-size and other properties are meant for a selector, add them to the correct block. 
+   Otherwise, remove these stray lines to fix the syntax error. */
 
   .modal-content {
     margin: 20% auto;
