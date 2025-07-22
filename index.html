@@ -433,16 +433,11 @@
         slideIndex = Math.min(2,slideIndex+1);
         scrollToSlide(slideIndex);
       });
-      // Auto-scroll every 5 seconds
-      setInterval(()=>{
-        slideIndex = (slideIndex+1)%3;
-        scrollToSlide(slideIndex);
-      },5000);
     </script>
   </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact" class="parallax-section fade-in" style="background-image:url('img/futuristic-lights.jpg'); margin-bottom:64px;">
+<section id="contact" class="parallax-section fade-in" style="background-image:url('img/futuristic-lights.jpg'); margin-top:64px; margin-bottom:64px;">
   <div class="contact-card" style="position:relative; z-index:2; background:rgba(255,255,255,0.85); border-radius:32px; box-shadow:0 2px 24px #14b8a6aa; padding:48px 32px; max-width:520px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center;">
     <form action="https://formsubmit.co/calvingutsa@gmail.com" method="POST" style="width:100%;">
       <input type="hidden" name="_captcha" value="false" />
