@@ -10,70 +10,38 @@
 </head>
 
 <body>
-  <!-- === Background Video & Header === -->
+  <!-- === Navigation Bar === -->
+  <nav class="navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Calvin_Gutsa_Resume.pdf" target="_blank">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- === Hero Section === -->
   <header>
-    <video id="video-background" autoplay muted loop class="main-video">
-      <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
-    </video>
-
-    <main>
-      <!-- === Navigation Bar === -->
-      <nav>
-        <div class="container">
-          <a href="#home" class="brand">Calvin Gutsa</a>
-          <ul>
-            <li><a href="#home" class="link-active">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About Me</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- === Slider / Intro === -->
-      <div class="header-body" id="home">
-        <div class="container">
-          <div class="slider">
-            <h1 class="slider-count">/01</h1>
-            <div class="progress"><div></div></div>
-            <p class="slider-cntrl active">Chatbot Systems</p>
-            <p class="slider-cntrl active">Embedded Devices</p>
-            <p class="slider-cntrl active">Behavioral Research</p>
-          </div>
-
-          <div>
-            <h1 class="title">Building with Purpose</h1>
-            <p>
-              Creating systems that bridge
-              <span class="sub-title">technology</span> and
-              <u>human-centered innovation</u>
-            </p>
-            <ul class="pagination-mobile">
-              <li class="pag-active"></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- === Bottom Section with Highlights === -->
-        <div class="header-bottom">
-          <div class="container">
-            <div class="item">
-              <h4>Updates</h4>
-              <small>Working on Interactive Chatbot for Children</small>
-              <small>Summer 2025</small>
-              <a href="#news">Read More</a>
-            </div>
-            <div class="item">
-              <h4>News</h4>
-              <small>Launching a new <span class="sub-title">open-source chatbot interface</span></small>
-              <a href="#news">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    <div class="container1">
+      <h1 class="big-title">Calvin Gutsa</h1>
+      <h3 class="small-title">Engineer | Researcher | Builder</h3>
+      <video id="video-background" autoplay muted loop class="main-video">
+        <source src="vid/tech-globe-vid.mp4" type="video/mp4" />
+      </video>
+    </div>
   </header>
+
+  <!-- === Welcome Section === -->
+  <div class="text-container">
+    <div class="text-details">
+      <div class="text-section">
+        <h2 class="text-title">Welcome to Calvin's Portfolio!</h2>
+        <p>Hello and thank you for visiting! I'm Calvin, a creative technologist passionate about building software systems that matter — from child-focused chatbots to backend automation tools and research platforms.</p>
+        <p>My work fuses engineering, behavioral science, and thoughtful UX design. You're welcome to explore and collaborate!</p>
+      </div>
+    </div>
+  </div>
 
   <!-- === About Me Section === -->
   <section id="about">
@@ -87,18 +55,15 @@
           <h5>Engineer<span> • Researcher • Builder</span></h5>
           <p>I'm Calvin Gutsa, a Computer Engineering student at NYU Abu Dhabi with a deep interest in emerging technologies, mental health innovation, and socially impactful solutions. My portfolio spans embedded systems, research-driven software, and intuitive backend design.</p>
           <p>Originally from Zimbabwe and currently based in the UAE, I’ve worked across labs, startups, and research teams to bring ideas to life through thoughtful, scalable tech. I’m passionate about solving meaningful problems through systems thinking and cross-disciplinary design.</p>
-          <p>Whether it’s prototyping a USSD platform for low-connectivity regions or developing emotion-aware chatbots, I care about building tools that matter. Let's connect and collaborate!</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- === Projects Section === -->
-  <section id="projects" class="portfolio-section">
+  <section id="projects">
     <div class="container">
-      <h1>🛠 Projects</h1>
-      <p>Here are some projects and research initiatives I've worked on.</p>
-
+      <h2 class="text-subtitle">🛠 Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
           <img src="img/web/ai-hand.jpg" alt="AI Hand Illustration" />
@@ -121,35 +86,39 @@
     </div>
   </section>
 
+  <!-- === Contact Section === -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-container">
+      <div class="text-section">
+        <h2 class="text-subtitle">Contact Me!</h2>
+      </div>
+      <form action="mailto:ctg7987@nyu.edu" method="post" enctype="text/plain" class="contact-form">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
   <!-- === Footer === -->
   <footer class="footer">
     <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About Me</a></li>
-          </ul>
+      <div class="footer-col">
+        <h4>Connect with me</h4>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-        <div class="footer-col">
-          <h4>Links</h4>
-          <ul>
-            <li><a href="mailto:ctg7987@nyu.edu">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/ctg7987" target="_blank">GitHub</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Me</h4>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/calvin-gutsa-8a70b3230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/ctg7987" target="_blank"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
+        <br>
+        <p>&copy; 2025 Calvin Gutsa. All rights reserved.</p>
       </div>
-      <p style="text-align: center; margin-top: 20px;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
     </div>
   </footer>
 </body>
