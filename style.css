@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue&family=Fredoka&display=swap');
 
 /* === Global Styles === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Comic Neue', Arial, sans-serif;
+  font-family: 'Fredoka', 'Poppins', Arial, sans-serif;
 }
 
 html {
@@ -58,13 +58,14 @@ body {
 .nav-link {
   color: #222;
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 10px 28px;
+  font-size: 1.18rem;
+  padding: 12px 32px;
   border-radius: 999px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  font-family: 'Poppins', Arial, sans-serif;
-  letter-spacing: 1px;
+  font-family: 'Fredoka', Arial, sans-serif;
+  letter-spacing: 1.5px;
   position: relative;
+  font-weight: 700;
 }
 .nav-link:hover, .nav-link:focus {
   background: linear-gradient(90deg, #a855f7 0%, #38bdf8 100%);
@@ -112,11 +113,12 @@ body {
 }
 .tagline {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: #fff;
   margin-top: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-shadow: 0 0 8px #38bdf8, 0 0 2px #a855f7;
+  font-family: 'Caveat', 'Chewy', cursive;
 }
 .futuristic-header {
   background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
@@ -128,20 +130,21 @@ body {
   position: relative;
 }
 .futuristic-title {
-  font-size: 3rem;
-  font-family: 'Comic Neue', cursive;
-  letter-spacing: 2px;
+  font-size: 3.2rem;
+  font-family: 'Chewy', 'Fredoka', cursive;
+  letter-spacing: 2.5px;
   color: #fff;
   text-shadow: 0 0 12px #a855f7, 0 0 2px #38bdf8;
   margin-bottom: 10px;
   text-align: center;
 }
 .futuristic-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #a8edea;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-align: center;
+  font-family: 'Fredoka', Arial, sans-serif;
 }
 .section-title.futuristic-title {
   font-size: 2.2rem;
@@ -369,6 +372,12 @@ body {
   margin-top: 18px;
   letter-spacing: 1px;
   text-shadow: 0 0 4px #38bdf8, 0 0 1px #fff;
+}
+
+/* === Headings Font === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Chewy', 'Fredoka', cursive;
+  font-weight: 400;
 }
 
 /* === Responsive === */
