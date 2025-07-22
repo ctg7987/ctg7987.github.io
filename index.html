@@ -213,7 +213,7 @@
   <!-- Landing (Home) Section -->
   <section id="home" class="landing-section fade-in" style="position:relative; min-height:65vh; width:100vw; display:flex; align-items:center; justify-content:center; background:url('img/ai-hand.jpg') no-repeat center center fixed; background-size:cover;">
     <div class="landing-overlay" style="position:absolute; inset:0; width:100vw; height:100%; background:linear-gradient(120deg,rgba(17,17,17,0.55) 0%,rgba(20,184,166,0.18) 100%); z-index:1;"></div>
-    <div class="landing-content" style="position:relative; z-index:2; text-align:center; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="landing-content" style="position:relative; z-index:2; text-align:center; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top:110px;">
       <h1 style="font-size:clamp(2.5rem,6vw,4rem); font-family:'Poppins',sans-serif; font-weight:700; color:#fff; margin-bottom:24px;">Building everyday tools that make life easier, one problem at a time.</h1>
       <p style="font-size:clamp(1.2rem,3vw,2rem); font-family:'Inter', Arial, sans-serif; color:#e0f7fa; margin-bottom:18px; max-width:700px;">Welcome. I build software for everyday impact. I care about real-world problems and love seeing people thrive.</p>
       <!-- Down Arrow Scroll Indicator -->
@@ -251,31 +251,22 @@
       <h2 class="section-title" style="font-size:clamp(2rem,4vw,2.8rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin:48px 0 36px 0; text-align:center; letter-spacing:1px;">Projects</h2>
       <div class="projects-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px;">
         <!-- Project 1 -->
-        <div class="project-item" style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-          <div style="width:100%; position:relative;">
-            <img src="img/ai-hand.jpg" alt="Neighborhood Helper App" style="width:100%; border-radius:18px; box-shadow:0 2px 24px #14b8a6aa;" />
-            <div style="position:absolute; inset:0; border-radius:18px; background:linear-gradient(120deg,rgba(17,17,17,0.18) 0%,rgba(20,184,166,0.10) 100%);"></div>
-          </div>
-          <h3 style="font-size:2rem; font-family:'Poppins',sans-serif; color:#fb7185; margin:18px 0 8px 0; text-align:center;">Neighborhood Helper App</h3>
-          <p style="font-size:1.15rem; font-family:'Inter',Arial,sans-serif; color:#222; text-align:center; max-width:90%;">A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.</p>
+        <div class="project-card" tabindex="0" style="background:#fff; border-radius:20px; padding:32px 24px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; border:none; box-shadow:0 4px 24px rgba(0,0,0,0.10); cursor:pointer;">
+          <img src="img/ai-hand.jpg" alt="Neighborhood Helper App" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+          <h3 style="color:#a855f7; margin-bottom:10px; font-family:'Comic Neue', cursive; font-size:2rem;">Neighborhood Helper App</h3>
+          <p style="color:#222; font-family:'Comic Neue', cursive; font-size:1.15rem;">A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.</p>
         </div>
         <!-- Project 2 -->
-        <div class="project-item" style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-          <div style="width:100%; position:relative;">
-            <img src="img/museum-of-the-future.jpg" alt="Travel Journal Platform" style="width:100%; border-radius:18px; box-shadow:0 2px 24px #fb7185aa;" />
-            <div style="position:absolute; inset:0; border-radius:18px; background:linear-gradient(120deg,rgba(17,17,17,0.18) 0%,rgba(251,113,133,0.10) 100%);"></div>
-          </div>
-          <h3 style="font-size:2rem; font-family:'Poppins',sans-serif; color:#14b8a6; margin:18px 0 8px 0; text-align:center;">Travel Journal Platform</h3>
-          <p style="font-size:1.15rem; font-family:'Inter',Arial,sans-serif; color:#222; text-align:center; max-width:90%;">A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.</p>
+        <div class="project-card" tabindex="0" style="background:#fff; border-radius:20px; padding:32px 24px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; border:none; box-shadow:0 4px 24px rgba(0,0,0,0.10); cursor:pointer;">
+          <img src="img/museum-of-the-future.jpg" alt="Travel Journal Platform" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+          <h3 style="color:#a855f7; margin-bottom:10px; font-family:'Comic Neue', cursive; font-size:2rem;">Travel Journal Platform</h3>
+          <p style="color:#222; font-family:'Comic Neue', cursive; font-size:1.15rem;">A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.</p>
         </div>
         <!-- Project 3 -->
-        <div class="project-item" style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-          <div style="width:100%; position:relative;">
-            <img src="img/futuristic-lights.jpg" alt="Smart Reminder System" style="width:100%; border-radius:18px; box-shadow:0 2px 24px #14b8a6aa;" />
-            <div style="position:absolute; inset:0; border-radius:18px; background:linear-gradient(120deg,rgba(17,17,17,0.18) 0%,rgba(20,184,166,0.10) 100%);"></div>
-          </div>
-          <h3 style="font-size:2rem; font-family:'Poppins',sans-serif; color:#fb7185; margin:18px 0 8px 0; text-align:center;">Smart Reminder System</h3>
-          <p style="font-size:1.15rem; font-family:'Inter',Arial,sans-serif; color:#222; text-align:center; max-width:90%;">A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.</p>
+        <div class="project-card" tabindex="0" style="background:#fff; border-radius:20px; padding:32px 24px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; border:none; box-shadow:0 4px 24px rgba(0,0,0,0.10); cursor:pointer;">
+          <img src="img/futuristic-lights.jpg" alt="Smart Reminder System" style="width:100%; border-radius:12px; margin-bottom:15px;" />
+          <h3 style="color:#a855f7; margin-bottom:10px; font-family:'Comic Neue', cursive; font-size:2rem;">Smart Reminder System</h3>
+          <p style="color:#222; font-family:'Comic Neue', cursive; font-size:1.15rem;">A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.</p>
         </div>
       </div>
     </div>
