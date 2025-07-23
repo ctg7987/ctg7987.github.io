@@ -302,12 +302,41 @@
     <div class="landing-overlay" style="position:absolute; inset:0; width:100vw; height:100vh; background:linear-gradient(120deg,rgba(17,17,17,0.55) 0%,rgba(20,184,166,0.18) 100%); z-index:1;"></div>
     <div class="hero-content" style="position:relative; z-index:2; text-align:center; width:100vw; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <h1 style="font-size:clamp(3rem,7vw,5rem); font-family:'Fredoka', Arial, sans-serif; font-weight:700; color:#fff; margin-bottom:18px; letter-spacing:2px;">Calvin Gutsa</h1>
-      <h2 style="font-size:clamp(2rem,5vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin-bottom:32px;">Software Developer</h2>
+      <h2 id="typewriter-title" style="font-size:clamp(2rem,5vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin-bottom:32px; min-height:3rem;"></h2>
       <div id="scroll-down-arrow" style="position:absolute; left:50%; bottom:48px; transform:translateX(-50%); z-index:10; opacity:1; transition:opacity 0.5s; pointer-events:none;">
         <span style="display:inline-block; animation:pulseDown 1.2s infinite alternate;">
           <i class="fas fa-arrow-down" style="font-size:2.8rem; color:#fb7185; text-shadow:0 0 16px #14b8a6cc;"></i>
         </span>
       </div>
+</script>
+<script>
+// Typewriter effect for "Software Developer" subtitle
+const typewriterEl = document.getElementById('typewriter-title');
+const typewriterText = 'Software Developer';
+let twIdx = 0, twDir = 1;
+function typewriterLoop() {
+  if (twDir === 1) {
+    if (twIdx < typewriterText.length) {
+      twIdx++;
+      typewriterEl.textContent = typewriterText.slice(0, twIdx);
+      setTimeout(typewriterLoop, 80);
+    } else {
+      twDir = -1;
+      setTimeout(typewriterLoop, 1200);
+    }
+  } else {
+    if (twIdx > 0) {
+      twIdx--;
+      typewriterEl.textContent = typewriterText.slice(0, twIdx);
+      setTimeout(typewriterLoop, 40);
+    } else {
+      twDir = 1;
+      setTimeout(typewriterLoop, 600);
+    }
+  }
+}
+if(typewriterEl) typewriterLoop();
+</script>
     </div>
   </section>
 
