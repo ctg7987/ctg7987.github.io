@@ -727,7 +727,7 @@ if(contactForm){
     </div>
     <p class="footer-copy" style="font-size:1.05rem; color:#a8edea; margin-top:18px; letter-spacing:1.2px; font-family:'Poppins',sans-serif; font-weight:400; text-align:center;">&copy; 2025 Calvin Gutsa. All rights reserved.</p>
   </div>
-  <button class="footer-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:24px; right:24px; background:linear-gradient(120deg,#14b8a6 0%,#fb7185 100%); color:#fff; border:none; border-radius:50%; box-shadow:0 2px 16px #14b8a655; width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:999; opacity:0.85; transition:background 0.2s, box-shadow 0.2s, opacity 0.2s;"><i class="fas fa-arrow-up"></i></button>
+  <button id="backToTopBtn" class="footer-top" aria-label="Back to Top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:24px; right:24px; background:linear-gradient(120deg,#14b8a6 0%,#fb7185 100%); color:#fff; border:none; border-radius:50%; box-shadow:0 2px 16px #14b8a655; width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-size:2rem; cursor:pointer; z-index:999; opacity:0.85; transition:background 0.2s, box-shadow 0.2s, opacity 0.2s; display:none;"><i class="fas fa-arrow-up"></i></button>
 </footer>
 <style>
 @keyframes pulseDown {
@@ -855,5 +855,19 @@ if(contactForm){
   }
 }
 </style>
+<script>
+// Show/hide Back to Top button only after scrolling past the hero section
+document.addEventListener('scroll', function() {
+  var btn = document.getElementById('backToTopBtn');
+  var hero = document.querySelector('.hero-section');
+  if (!btn || !hero) return;
+  var heroBottom = hero.getBoundingClientRect().bottom;
+  if (heroBottom < 0) {
+    btn.style.display = 'flex';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+</script>
 </body>
 </html>
