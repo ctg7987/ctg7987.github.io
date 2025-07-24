@@ -96,7 +96,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%), url('img/futuristic-lights.webp') no-repeat center center fixed;
+  background: url('../img/ai-hand.webp') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   color: #222;
@@ -568,4 +568,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s, box-shadow 0.3s;
   border: none;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* Animation for the scroll-down arrow */
+@keyframes pulseDown {
+  from {
+    transform: translateY(-6px);
+  }
+  to {
+    transform: translateY(6px);
+  }
 }
