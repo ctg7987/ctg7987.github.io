@@ -3,19 +3,6 @@ window.addEventListener('beforeunload', function() {
     window.scrollTo(0, 0);
   });
   
-  // Force scroll to top on page load
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      window.scrollTo(0, 0);
-    }, 100);
-  });
-  
-  // Also handle hash changes that might cause auto-scrolling
-  if (window.location.hash) {
-    window.location.hash = '';
-    window.scrollTo(0, 0);
-  }
-
   // Navbar shrink on scroll
   window.addEventListener('scroll', function() {
     const nav = document.querySelector('.glass-nav');
