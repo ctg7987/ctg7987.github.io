@@ -300,11 +300,30 @@
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <script src="parallax.js" defer></script>
+  <script>
+    // Ensure page always starts at the top
+    window.addEventListener('beforeunload', function() {
+      window.scrollTo(0, 0);
+    });
+    
+    // Force scroll to top on page load
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 100);
+    });
+    
+    // Also handle hash changes that might cause auto-scrolling
+    if (window.location.hash) {
+      window.location.hash = '';
+      window.scrollTo(0, 0);
+    }
+  </script>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="main-nav glass-nav" aria-label="Main Navigation">
-    <a href="#home" class="nav-link" aria-label="Home">Home</a>
+    <a href="/" class="nav-link" aria-label="Home">Home</a>
     <a href="#about" class="nav-link" aria-label="About Me">About</a>
     <a href="#projects" class="nav-link" aria-label="Projects">Projects</a>
     <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
