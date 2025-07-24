@@ -1,7 +1,6 @@
-// Ensure page always starts at the top
-window.addEventListener('beforeunload', function() {
-    window.scrollTo(0, 0);
-  });
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
   
   // Navbar shrink on scroll
   window.addEventListener('scroll', function() {
@@ -43,38 +42,52 @@ const leftArrow = document.querySelector('.carousel-arrow.left');
 const rightArrow = document.querySelector('.carousel-arrow.right');
 const dots = document.querySelectorAll('.carousel-dots .dot');
 let slideIndex = 0;
+
+function updateDots(idx) {
+  if (dots.length > 0) {
+    dots.forEach((dot, i) => dot.style.opacity = i === idx ? "1" : "0.5");
+  }
+}
+
 function scrollToSlide(idx) {
   const slides = document.querySelectorAll('.carousel-slide');
   if (slides[idx]) {
-    slides[idx].scrollIntoView({behavior:'smooth',inline:'center'});
-    dots.forEach((dot,i)=>dot.style.opacity=i===idx?"1":"0.5");
+    slides[idx].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    updateDots(idx);
   }
 }
-leftArrow.addEventListener('click',()=>{
-  slideIndex = Math.max(0,slideIndex-1);
-  scrollToSlide(slideIndex);
-});
-rightArrow.addEventListener('click',()=>{
-  slideIndex = Math.min(2,slideIndex+1);
-  scrollToSlide(slideIndex);
-});
-// Keyboard navigation
-leftArrow.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){leftArrow.click();}});
-rightArrow.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){rightArrow.click();}});
-// Dots navigation
-dots.forEach((dot,i)=>{
-  dot.addEventListener('click',()=>{slideIndex=i;scrollToSlide(slideIndex);});
-  dot.setAttribute('tabindex','0');
-  dot.setAttribute('aria-label',`Go to slide ${i+1}`);
-  dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){slideIndex=i;scrollToSlide(slideIndex);}});
-});
-// Arrow bounce animation
-[leftArrow,rightArrow].forEach(arrow=>{
-  arrow.addEventListener('mouseenter',()=>arrow.style.transform='translateY(-50%) scale(1.15)');
-  arrow.addEventListener('mouseleave',()=>arrow.style.transform='translateY(-50%)');
-});
-// Initial dot highlight
-scrollToSlide(slideIndex);
+
+if (carousel && leftArrow && rightArrow && dots.length > 0) {
+  leftArrow.addEventListener('click', () => {
+    slideIndex = Math.max(0, slideIndex - 1);
+    scrollToSlide(slideIndex);
+  });
+  rightArrow.addEventListener('click', () => {
+    slideIndex = Math.min(dots.length - 1, slideIndex + 1);
+    scrollToSlide(slideIndex);
+  });
+
+  // Keyboard navigation
+  leftArrow.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { leftArrow.click(); } });
+  rightArrow.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { rightArrow.click(); } });
+
+  // Dots navigation
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { slideIndex = i; scrollToSlide(slideIndex); });
+    dot.setAttribute('tabindex', '0');
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { slideIndex = i; scrollToSlide(slideIndex); } });
+  });
+
+  // Arrow bounce animation
+  [leftArrow, rightArrow].forEach(arrow => {
+    arrow.addEventListener('mouseenter', () => arrow.style.transform = 'translateY(-50%) scale(1.15)');
+    arrow.addEventListener('mouseleave', () => arrow.style.transform = 'translateY(-50%)');
+  });
+
+  // Initial dot highlight
+  updateDots(slideIndex);
+}
 // Responsive: stack cards vertically on mobile
 function handleResize(){
   if(window.innerWidth<700){
