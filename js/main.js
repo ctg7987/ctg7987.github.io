@@ -86,7 +86,9 @@ if (carousel && leftArrow && rightArrow && dots.length > 0) {
   });
 
   // Initial dot highlight
-  updateDots(slideIndex);
+  if (dots.length > 0) {
+    updateDots(slideIndex);
+  }
 }
 // Responsive: stack cards vertically on mobile
 function handleResize(){
