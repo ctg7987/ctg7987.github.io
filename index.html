@@ -8,8 +8,9 @@
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    // Ensure we are at the top of the page as soon as it loads
-    window.scrollTo(0, 0);
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+    });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Calvin Gutsa - Computer Engineering student at NYU Abu Dhabi. Explore my software development projects, skills in emerging technologies, and contact information." />
@@ -30,7 +31,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <script src="parallax.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
