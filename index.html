@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Calvin Gutsa | Portfolio</title>
+  <title>Calvin Gutsa | Software Developer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Calvin Gutsa, Software Developer. Explore projects, skills, and contact information." />
-  <meta name="keywords" content="Calvin Gutsa, software developer, portfolio, projects, contact" />
-  <meta property="og:title" content="Calvin Gutsa | Portfolio" />
-  <meta property="og:description" content="Portfolio of Calvin Gutsa, Software Developer. Explore projects, skills, and contact information." />
-  <meta property="og:image" content="img/profile-pic.JPG" />
+  <meta name="description" content="Calvin Gutsa - Computer Engineering student at NYU Abu Dhabi. Explore my software development projects, skills in emerging technologies, and contact information." />
+  <meta name=          <p style="font-size:clamp(1.2rem,2vw,1.4rem); font-family:'Inter', Arial, sans-serif; color:#222; margin-bottom:18px; text-shadow:0 2px 16px #fff, 0 0 2px #14b8a6;">I'm a Computer Engineering student at NYU Abu Dhabi passionate about creating software that solves real-world problems. My focus spans mobile app development, web technologies, and emerging AI applications. I believe in building technology that's not just functional, but intuitive and accessible to everyone.</p>
+          <p style="font-size:clamp(1.2rem,2vw,1.4rem); font-family:'Inter', Arial, sans-serif; color:#222; margin-bottom:18px; text-shadow:0 2px 16px #fff, 0 0 2px #14b8a6;">When I'm not coding, you'll find me exploring new places, discovering music from around the world, or staying curious about the latest tech innovations. I'm always excited to collaborate on projects that make a positive impact.</p>eywords" content="Calvin Gutsa, software developer, computer engineering, NYU Abu Dhabi, portfolio, projects, mobile apps, web development, AI" />
+  <meta name="author" content="Calvin Gutsa" />
+  <meta property="og:title" content="Calvin Gutsa | Software Developer Portfolio" />
+  <meta property="og:description" content="Computer Engineering student at NYU Abu Dhabi specializing in software development, mobile apps, and emerging technologies." />
+  <meta property="og:image" content="https://ctg7987.github.io/img/profile-pic.JPG" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctg7987.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calvin Gutsa | Software Developer Portfolio" />
+  <meta name="twitter:description" content="Computer Engineering student at NYU Abu Dhabi specializing in software development and emerging technologies." />
+  <link rel="canonical" href="https://ctg7987.github.io/" />
   <link rel="icon" href="img/profile-pic.JPG" type="image/jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,6 +113,24 @@
       .landing-content { padding-top: 80px !important; }
       .about-content { flex-direction: column !important; gap: 24px !important; }
       .project-card { padding: 18px 8px !important; }
+      .glass-nav { 
+        padding: 12px 20px !important; 
+        gap: 1rem !important;
+        font-size: 0.9rem !important;
+      }
+      .nav-link { 
+        padding: 8px 16px !important; 
+        font-size: 0.9rem !important; 
+      }
+    }
+    @media (max-width: 600px) {
+      .carousel-arrow.left, .carousel-arrow.right {
+        display: none !important;
+      }
+      .glass-nav {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+      }
     }
   </style>
   <style>
@@ -280,12 +304,11 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="main-nav glass-nav" aria-label="Main Navigation">
-    <!-- Removed dark mode toggle button -->
-    <a href="#" class="nav-link" aria-label="Home">Home</a>
-    <a href="#about" class="nav-link" aria-label="About Me">About Me</a>
+    <a href="#home" class="nav-link" aria-label="Home">Home</a>
+    <a href="#about" class="nav-link" aria-label="About Me">About</a>
     <a href="#projects" class="nav-link" aria-label="Projects">Projects</a>
     <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
-    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link" aria-label="Resume">Resume</a>
+    <a href="https://drive.google.com/file/d/1q0VKRmeLZDC9QAb2-4OI2dEtAKxJcCRy/view?usp=sharing" target="_blank" class="nav-link" aria-label="Resume" rel="noopener">Resume</a>
   </nav>
   <script>
     // Navbar shrink on scroll
@@ -698,8 +721,11 @@ if(contactForm){
           <label for="lname" style="font-family:'Fredoka', Arial, sans-serif; color:#fb7185; font-size:1.1rem;">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name" required style="padding:12px; border-radius:1rem; border:1.5px solid #fb7185; font-size:1.1rem;" aria-label="Last Name" />
           <label for="subject" style="font-family:'Fredoka', Arial, sans-serif; color:#222; font-size:1.1rem;">Message</label>
-          <textarea id="subject" name="subject" placeholder="Write something" style="height:120px; padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem;" required aria-label="Subject"></textarea>
-          <input type="submit" value="Submit" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); color:#fff; font-weight:600; border:none; border-radius:999px; padding:14px 0; font-size:1.2rem; cursor:pointer; box-shadow:none; transition:background 0.2s, transform 0.2s; margin-top:8px;" aria-label="Submit Contact Form" />
+          <textarea id="subject" name="subject" placeholder="Write something meaningful..." style="height:120px; padding:12px; border-radius:1rem; border:1.5px solid #14b8a6; font-size:1.1rem; resize: vertical;" required aria-label="Subject"></textarea>
+          <button type="submit" id="submitBtn" style="background:linear-gradient(90deg,#14b8a6 0%,#fb7185 100%); color:#fff; font-weight:600; border:none; border-radius:999px; padding:14px 0; font-size:1.2rem; cursor:pointer; box-shadow:none; transition:all 0.2s; margin-top:8px; position:relative;" aria-label="Submit Contact Form">
+            <span id="submitText">Send Message</span>
+            <span id="loadingText" style="display:none;">Sending...</span>
+          </button>
         </div>
       </form>
     </div>
