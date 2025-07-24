@@ -183,17 +183,6 @@ if(profileImg){
     profileImg.style.transform = 'none';
   });
 }
-// Animate section fade-in on scroll
-const fadeEls = document.querySelectorAll('.fade-in');
-function revealOnScroll(){
-  fadeEls.forEach(el=>{
-    const rect = el.getBoundingClientRect();
-    if(rect.top<window.innerHeight-80){el.classList.add('visible');}
-  });
-}
-window.addEventListener('scroll',revealOnScroll);
-window.addEventListener('DOMContentLoaded',revealOnScroll);
-
 // Contact form custom success message
 const contactForm = document.querySelector('form[action*="formsubmit.co"]');
 if(contactForm){
