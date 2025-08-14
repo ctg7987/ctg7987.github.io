@@ -1,12 +1,61 @@
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+
+// FORCE HORIZONTAL NAV - Override any CSS that tries to make it vertical
+function forceHorizontalNav() {
+  const nav = document.querySelector('nav.main-nav.glass-nav');
+  if (nav) {
+    nav.style.setProperty('display', 'flex', 'important');
+    nav.style.setProperty('flex-direction', 'row', 'important');
+    nav.style.setProperty('flex-wrap', 'nowrap', 'important');
+    nav.style.setProperty('white-space', 'nowrap', 'important');
+    nav.style.setProperty('align-items', 'center', 'important');
+    nav.style.setProperty('overflow-x', 'auto', 'important');
+    nav.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');
+    nav.style.setProperty('gap', '0.5rem', 'important');
+    nav.style.setProperty('padding', '8px 12px', 'important');
+    nav.style.setProperty('max-width', 'calc(100vw - 32px)', 'important');
+    
+    // Force all nav links to be inline
+    const links = nav.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.style.setProperty('display', 'inline-flex', 'important');
+      link.style.setProperty('align-items', 'center', 'important');
+      link.style.setProperty('flex', '0 0 auto', 'important');
+      link.style.setProperty('white-space', 'nowrap', 'important');
+      link.style.setProperty('font-size', '0.9rem', 'important');
+      link.style.setProperty('padding', '6px 10px', 'important');
+      link.style.setProperty('margin', '0 2px', 'important');
+    });
+  }
+}
+
+// Run immediately and on DOM ready
+forceHorizontalNav();
+document.addEventListener('DOMContentLoaded', forceHorizontalNav);
+// Also run after a short delay in case styles load late
+setTimeout(forceHorizontalNav, 100);
+
+// Register service worker for offline support
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+  });
+}
   
   // Navbar shrink on scroll
   window.addEventListener('scroll', function() {
     const nav = document.querySelector('.glass-nav');
-    if(window.scrollY > 60) nav.classList.add('shrunk');
-    else nav.classList.remove('shrunk');
+    if (nav) {
+      if(window.scrollY > 60) nav.classList.add('shrunk');
+      else nav.classList.remove('shrunk');
+    }
+    // Back to top button visibility
+    const btt = document.getElementById('backToTopBtn');
+    if (btt) {
+      btt.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    }
   });
 
   // Typewriter effect for "Software Developer" subtitle
@@ -14,6 +63,7 @@ const typewriterEl = document.getElementById('typewriter-title');
 const typewriterText = 'Software Developer';
 let twIdx = 0, twDir = 1;
 function typewriterLoop() {
+  if (!typewriterEl) return;
   if (twDir === 1) {
     if (twIdx < typewriterText.length) {
       twIdx++;
@@ -38,6 +88,18 @@ if(typewriterEl) typewriterLoop();
 
 // Carousel navigation and accessibility
 const carousel = document.querySelector('.carousel');
+if (carousel) {
+  // Enable arrow buttons if present
+  const left = document.querySelector('.carousel-arrow.left');
+  const right = document.querySelector('.carousel-arrow.right');
+  const slide = () => {
+    const card = carousel.querySelector('.carousel-slide');
+    const step = card ? card.getBoundingClientRect().width + 16 : 260;
+    return step;
+  }
+  left && left.addEventListener('click', () => carousel.scrollBy({left: -slide(), behavior: 'smooth'}));
+  right && right.addEventListener('click', () => carousel.scrollBy({left: slide(), behavior: 'smooth'}));
+}
 const leftArrow = document.querySelector('.carousel-arrow.left');
 const rightArrow = document.querySelector('.carousel-arrow.right');
 const dots = document.querySelectorAll('.carousel-dots .dot');
@@ -92,6 +154,7 @@ if (carousel && leftArrow && rightArrow && dots.length > 0) {
 }
 // Responsive: stack cards vertically on mobile
 function handleResize(){
+  if(!carousel) return;
   if(window.innerWidth<700){
     carousel.style.flexDirection='column';
     carousel.style.alignItems='center';
@@ -105,6 +168,16 @@ function handleResize(){
 window.addEventListener('resize',handleResize);
 handleResize();
 
+// Tiny-screen menu toggle
+const menuBtn = document.querySelector('.menu-btn');
+const mainNav = document.getElementById('main-nav');
+if (menuBtn && mainNav) {
+  menuBtn.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('menu-open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+}
+
 // Modal popup for project details
 window.showProjectModal = function(idx) {
   const details = [
@@ -113,21 +186,21 @@ window.showProjectModal = function(idx) {
       desc: 'A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.',
       github: 'https://github.com/ctg7987/neighborhood-helper',
       demo: '#',
-      img: 'img/ai-hand.jpg'
+  img: 'img/ai-hand.webp'
     },
     {
       title: 'Travel Journal Platform',
       desc: 'A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.',
       github: 'https://github.com/ctg7987/travel-journal',
       demo: '#',
-      img: 'img/museum-of-the-future.jpg'
+  img: 'img/museum-of-the-future.webp'
     },
     {
       title: 'Smart Reminder System',
       desc: 'A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.',
       github: 'https://github.com/ctg7987/smart-reminder',
       demo: '#',
-      img: 'img/futuristic-lights.jpg'
+  img: 'img/futuristic-lights.webp'
     }
   ];
   const d = details[idx];

@@ -29,13 +29,59 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css?v=20250814d" />
+  <style>
+    /* NUCLEAR CSS RESET for nav element */
+    nav, nav * { all: unset !important; }
+    nav {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      align-items: center !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      position: fixed !important;
+      top: 24px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      z-index: 200 !important;
+      background: rgba(255,255,255,0.18) !important;
+      backdrop-filter: blur(16px) !important;
+      border-radius: 999px !important;
+      padding: 8px 12px !important;
+      gap: 0.5rem !important;
+      max-width: calc(100vw - 32px) !important;
+      border: 2.5px solid #38bdf8 !important;
+      box-shadow: 0 2px 24px rgba(56,189,248,0.10) !important;
+      scrollbar-width: none !important;
+    }
+    nav::-webkit-scrollbar { display: none !important; }
+    nav a {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: 6px 10px !important;
+      margin: 0 2px !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      color: #222 !important;
+      background: rgba(255,255,255,0.55) !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      font-family: 'Fredoka', Arial, sans-serif !important;
+      transition: all 0.2s !important;
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="main-nav glass-nav" aria-label="Main Navigation">
+  <nav id="main-nav" class="main-nav glass-nav" aria-label="Main Navigation" style="display:flex;flex-direction:row;flex-wrap:nowrap;white-space:nowrap;align-items:center;gap:.5rem;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" title="Menu" style="display:none;">
+      <span aria-hidden="true">☰</span>
+    </button>
     <a href="/" class="nav-link" aria-label="Home">Home</a>
     <a href="#about" class="nav-link" aria-label="About Me">About</a>
     <a href="#projects" class="nav-link" aria-label="Projects">Projects</a>
