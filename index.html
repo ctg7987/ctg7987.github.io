@@ -63,9 +63,9 @@
     nav a {
       display: inline-flex !important;
       align-items: center !important;
-      padding: 4px 8px !important;
-      margin: 0 1px !important;
-      font-size: 0.8rem !important;
+      padding: 8px 16px !important;
+      margin: 0 3px !important;
+      font-size: 1rem !important;
       font-weight: 700 !important;
       color: #222 !important;
       background: rgba(255,255,255,0.55) !important;
@@ -74,6 +74,17 @@
       white-space: nowrap !important;
       font-family: 'Fredoka', Arial, sans-serif !important;
       transition: all 0.2s !important;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        padding: 4px 8px !important;
+        margin: 0 1px !important;
+        font-size: 0.8rem !important;
+      }
+      nav {
+        gap: 0.3rem !important;
+        padding: 6px 10px !important;
+      }
     }
     @media (max-width: 480px) {
       nav a {
