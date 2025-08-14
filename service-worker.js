@@ -1,15 +1,14 @@
-const CACHE_NAME = 'calvin-portfolio-v2';
+const CACHE_NAME = 'calvin-portfolio-v3';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/style.css',
-  '/script.js',
-  '/parallax.js',
   '/css/main.css',
-  '/img/profile-pic.JPG',
-  '/img/ai-hand.jpg',
-  '/img/futuristic-lights.jpg',
-  '/img/museum-of-the-future.jpg',
+  '/js/main.js',
+  '/script.js',
+  '/img/profile-pic.webp',
+  '/img/ai-hand.webp',
+  '/img/futuristic-lights.webp',
+  '/img/museum-of-the-future.webp',
   'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
 ];
@@ -46,35 +45,31 @@ self.addEventListener('activate', function(event) {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', function(event) {
+  const req = event.request;
+  const isHTML = req.headers.get('accept')?.includes('text/html');
+  if (isHTML) {
+    // Network-first for HTML
+    event.respondWith(
+      fetch(req)
+        .then(res => {
+          const resClone = res.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(req, resClone));
+          return res;
+        })
+        .catch(() => caches.match(req))
+    );
+    return;
+  }
+  // Cache-first for other assets
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        
-        // Clone the request
-        var fetchRequest = event.request.clone();
-        
-        return fetch(fetchRequest).then(
-          function(response) {
-            // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            
-            // Clone the response
-            var responseToCache = response.clone();
-            
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
-            
-            return response;
-          }
-        );
-      })
+    caches.match(req).then(cached => {
+      return (
+        cached || fetch(req).then(res => {
+          const resClone = res.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(req, resClone));
+          return res;
+        })
+      );
+    })
   );
 });
