@@ -75,6 +75,37 @@
       font-family: 'Fredoka', Arial, sans-serif !important;
       transition: all 0.2s !important;
     }
+    
+    /* Desktop styles - larger navigation */
+    @media (min-width: 1024px) {
+      nav {
+        padding: 12px 20px !important;
+        gap: 0.75rem !important;
+        border-radius: 999px !important;
+        border: 3px solid #38bdf8 !important;
+      }
+      nav a {
+        padding: 12px 24px !important;
+        margin: 0 4px !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+      }
+    }
+    
+    /* Large desktop styles - even bigger */
+    @media (min-width: 1440px) {
+      nav {
+        padding: 14px 24px !important;
+        gap: 1rem !important;
+        top: 32px !important;
+      }
+      nav a {
+        padding: 14px 28px !important;
+        margin: 0 5px !important;
+        font-size: 1.2rem !important;
+      }
+    }
+    
     @media (max-width: 768px) {
       nav a {
         padding: 4px 8px !important;
