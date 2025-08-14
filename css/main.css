@@ -518,7 +518,62 @@ html, body {
   color: #a8edea;
   margin-top: 18px;
   letter-spacing: 1px;
-  text-shadow: 0 0 4px #38bdf8, 0 0 1px #fff;
+}
+
+/* ===== ACCESSIBILITY & TOUCH IMPROVEMENTS ===== */
+
+/* Smooth scroll behavior for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  nav a, .social-icons a, .contact-form button, .carousel-btn {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  
+  .project-card:hover,
+  .project-card:focus {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+  }
+}
+
+/* Focus states for accessibility */
+nav a:focus,
+.social-icons a:focus,
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form button:focus,
+.project-card:focus {
+  outline: 2px solid #14b8a6;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #14b8a6;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
 
 /* === Headings Font === */
