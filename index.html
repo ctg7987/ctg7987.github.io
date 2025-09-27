@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Calvin Gutsa | Software Developer Portfolio</title>
+  <title>Calvin Gutsa | AI Engineering • Full-Stack + Applied ML</title>
   <script>
     // Prevents the browser from trying to restore scroll position on page load
     if ('scrollRestoration' in history) {
@@ -14,26 +14,54 @@
     });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Calvin Gutsa - Computer Engineering student at NYU Abu Dhabi. Explore my software development projects, skills in emerging technologies, and contact information." />
-  <meta name="keywords" content="Calvin Gutsa, software developer, computer engineering, NYU Abu Dhabi, portfolio, projects, mobile apps, web development, AI" />
+  <meta name="description" content="Calvin Gutsa - AI Engineer building end-to-end products that turn models into reliable user experiences. Full-stack developer with applied ML focus at NYU Abu Dhabi." />
+  <meta name="keywords" content="Calvin Gutsa, AI engineer, machine learning, full-stack developer, applied ML, NYU Abu Dhabi, portfolio, Python, React, FastAPI, ML engineering" />
   <meta name="author" content="Calvin Gutsa" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#14b8a6" />
-  <meta property="og:title" content="Calvin Gutsa | Software Developer Portfolio" />
-  <meta property="og:description" content="Computer Engineering student at NYU Abu Dhabi specializing in software development, mobile apps, and emerging technologies." />
-  <meta property="og:image" content="https://ctg7987.github.io/img/profile-pic.webp" />
+  <meta property="og:title" content="Calvin Gutsa | AI Engineering • Full-Stack + Applied ML" />
+  <meta property="og:description" content="AI Engineer building end-to-end products that turn models into reliable user experiences. Full-stack developer with applied ML focus." />
+  <meta property="og:image" content="https://ctg7987.github.io/img/ai-hand.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctg7987.github.io/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Calvin Gutsa | Software Developer Portfolio" />
-  <meta name="twitter:description" content="Computer Engineering student at NYU Abu Dhabi specializing in software development and emerging technologies." />
-  <meta name="twitter:image" content="https://ctg7987.github.io/img/profile-pic.webp" />
+  <meta name="twitter:title" content="Calvin Gutsa | AI Engineering • Full-Stack + Applied ML" />
+  <meta name="twitter:description" content="AI Engineer building end-to-end products that turn models into reliable user experiences. Full-stack developer with applied ML focus." />
+  <meta name="twitter:image" content="https://ctg7987.github.io/img/ai-hand.webp" />
   <link rel="canonical" href="https://ctg7987.github.io/" />
-  <link rel="icon" href="img/profile-pic.webp" type="image/webp" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Calvin Gutsa",
+    "url": "https://ctg7987.github.io",
+    "image": "https://ctg7987.github.io/img/ai-hand.webp",
+    "jobTitle": "AI Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "NYU Abu Dhabi"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "NYU Abu Dhabi"
+    },
+    "knowsAbout": ["AI Engineering", "Machine Learning", "Full-Stack Development", "Applied ML", "Python", "React", "FastAPI"],
+    "sameAs": [
+      "https://github.com/ctg7987",
+      "https://www.linkedin.com/in/calvin-gutsa-8a70b3230/"
+    ]
+  }
+  </script>
+  
+  <link rel="icon" href="img/ai-hand.webp" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Chewy&family=Fredoka:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20250814d" />
+  <link rel="stylesheet" href="css/main.css?v=20250115" />
+  <link rel="preload" href="img/profile-pic.webp" as="image">
+  <link rel="preload" href="img/ai-hand.webp" as="image">
   <style>
     /* NUCLEAR CSS RESET for nav element */
     nav, nav * { all: unset !important; }
@@ -219,19 +247,36 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero: Name & Title Section -->
+    <!-- Hero Section -->
   <section id="home" class="hero-section" style="position:relative; min-height:100vh; width:100vw; display:flex; align-items:center; justify-content:center; background:url('img/ai-hand.webp') no-repeat center center fixed; background-size:cover; margin-bottom:64px;" role="region" aria-label="Hero">
-    <div class="animated-gradient"></div>
-    <div class="landing-overlay" style="position:absolute; inset:0; width:100vw; height:100vh; background:rgba(0,0,0,0.2); z-index:1; backdrop-filter: blur(1px);"></div>
+    <div class="landing-overlay" style="position:absolute; inset:0; width:100vw; height:100vh; background:rgba(0,0,0,0.3); z-index:1; backdrop-filter: blur(1px);"></div>
     <div class="hero-content" style="position:relative; z-index:2; text-align:center; width:100vw; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <h1 style="font-size:clamp(3rem,7vw,5rem); font-family:'Fredoka', Arial, sans-serif; font-weight:700; color:#fff; margin-bottom:18px; letter-spacing:2px;">Calvin Gutsa</h1>
-      <h2 id="typewriter-title" style="font-size:clamp(2rem,5vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin-bottom:32px; min-height:3rem;"></h2>
+      <h2 id="typewriter-title" style="font-size:clamp(2rem,5vw,3rem); font-family:'Poppins',sans-serif; color:#14b8a6; margin-bottom:32px; min-height:3rem;">AI Engineer</h2>
       <div id="scroll-down-arrow" style="position:absolute; left:50%; bottom:48px; transform:translateX(-50%); z-index:10; opacity:1; transition:opacity 0.5s; pointer-events:none;">
         <span style="display:inline-block; animation:pulseDown 1.2s infinite alternate;">
           <i class="fas fa-arrow-down" style="font-size:2.8rem; color:#fb7185; text-shadow:0 0 16px #14b8a6cc;"></i>
         </span>
       </div>
     </div>
+  </section>
+
+  <!-- Parallax Spacer Section: transition between homepage and Welcome -->
+  <section class="parallax-spacer" style="
+    background-image: url('img/futuristic-lights.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:64px;
+    margin-bottom:64px;
+  ">
+    <div style="position:absolute; inset:0; background-color:rgba(0,0,0,0.3); z-index:1;"></div>
   </section>
 
   <!-- Parallax Spacer Section: transition between homepage and Welcome -->
@@ -283,7 +328,7 @@
   <section id="about" class="about-section" style="position:relative; min-height:60vh; width:100vw; display:flex; align-items:center; justify-content:center; background:url('img/burj-khalifa.webp') no-repeat center center fixed; background-size:cover; padding-top:60px; padding-bottom:60px; margin-top:128px; margin-bottom:128px;" role="region" aria-label="About Me">
     <div style="position:absolute; inset:0; width:100vw; height:100%; background:linear-gradient(120deg,rgba(255,255,255,0.15) 0%,rgba(20,184,166,0.10) 100%); z-index:1;"></div>
     <div class="about-content" style="position:relative; z-index:2; width:100%; max-width:1200px; display:flex; flex-direction:row; align-items:center; justify-content:center; gap:48px; background:rgba(255,255,255,0.25); border-radius:20px; box-shadow:0 8px 32px rgba(0,0,0,0.20); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.4);">
-      <img src="img/profile-pic.webp" alt="Calvin Gutsa smiling outdoors, profile photo" class="profile-pic animated-profile" style="width:170px; height:170px; border-radius:50%; object-fit:cover; box-shadow:0 0 32px 8px #14b8a6, 0 2px 24px rgba(0,0,0,0.32); border:4px solid #e0f7fa; margin-bottom:0; transition:box-shadow 0.4s;" />
+      <img src="img/profile-pic.webp" alt="Calvin Gutsa smiling outdoors, profile photo" class="profile-pic animated-profile" loading="eager" style="width:170px; height:170px; border-radius:50%; object-fit:cover; box-shadow:0 0 32px 8px #14b8a6, 0 2px 24px rgba(0,0,0,0.32); border:4px solid #e0f7fa; margin-bottom:0; transition:box-shadow 0.4s;" />
       <div class="about-text" style="flex:1; display:flex; flex-direction:column; gap:18px; max-width:600px; position:relative;">
         <div style="position:relative; z-index:2; padding:24px; border-radius:18px;">
           <h2 style="font-size:clamp(2.2rem,4vw,3rem); font-family:'Poppins',sans-serif; color:#000; margin-bottom:24px; text-shadow:0 2px 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,0.8); font-weight:700;">About Me</h2>
@@ -323,7 +368,7 @@
           <div class="carousel" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; width:100%; gap:32px; padding-bottom:32px;">
             <!-- Slide 1 -->
             <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:rgba(255,255,255,0.40); border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.20); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);" tabindex="0" role="button" aria-label="View Autonomous Multi-Tool AI Task Agent details">
-              <img src="img/ai-agent.webp" alt="Autonomous AI Agent - Multi-tool task automation system interface" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <img src="img/ai-agent.webp" alt="Autonomous AI Agent - Multi-tool task automation system interface" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
               <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem; font-weight:700; text-shadow:0 1px 3px rgba(255,255,255,0.8);">Autonomous Multi-Tool AI Agent</h3>
               <p style="color:#000; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:12px; line-height:1.5; font-weight:500; text-shadow:0 1px 3px rgba(255,255,255,0.7);">AI agent that autonomously performs complex tasks through natural language commands, breaking down requests into actionable steps with web search, analysis, and reporting capabilities.</p>
               <div style="display:flex; gap:8px; margin-top:auto;">
@@ -334,7 +379,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:rgba(255,255,255,0.40); border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.20); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);" tabindex="0" role="button" aria-label="View Custom Knowledge-Base Chatbot details">
-              <img src="img/vectordatabase.webp" alt="Knowledge Base Chatbot - Vector database and semantic search visualization" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <img src="img/vectordatabase.webp" alt="Knowledge Base Chatbot - Vector database and semantic search visualization" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
               <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem; font-weight:700; text-shadow:0 1px 3px rgba(255,255,255,0.8);">Custom Knowledge-Base Chatbot</h3>
               <p style="color:#000; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:12px; line-height:1.5; font-weight:500; text-shadow:0 1px 3px rgba(255,255,255,0.7);">RAG-powered chatbot that answers questions by retrieving information from custom documents. Features document upload, semantic search, and cited responses.</p>
               <div style="display:flex; gap:8px; margin-top:auto;">
@@ -345,7 +390,7 @@
             </div>
             <!-- Slide 3 -->
             <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:rgba(255,255,255,0.40); border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.20); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);" tabindex="0" role="button" aria-label="View AI Content Planner details">
-              <img src="img/marketing.webp" alt="AI Content Planner - Content marketing strategy and SEO optimization dashboard" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <img src="img/marketing.webp" alt="AI Content Planner - Content marketing strategy and SEO optimization dashboard" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
               <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem; font-weight:700; text-shadow:0 1px 3px rgba(255,255,255,0.8);">AI Content Planner & SEO Assistant</h3>
               <p style="color:#000; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:12px; line-height:1.5; font-weight:500; text-shadow:0 1px 3px rgba(255,255,255,0.7);">Smart content strategy tool that generates SEO-optimized outlines, researches trends, and creates data-driven content plans for marketers and creators.</p>
               <div style="display:flex; gap:8px; margin-top:auto;">
@@ -356,7 +401,7 @@
             </div>
             <!-- Slide 4 -->
             <div class="carousel-slide project-card" style="min-width:260px; max-width:260px; flex:0 0 260px; background:rgba(255,255,255,0.40); border-radius:20px; padding:32px 18px; text-align:center; box-shadow:0 8px 32px rgba(0,0,0,0.20); margin:0; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; scroll-snap-align:center; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);" tabindex="0" role="button" aria-label="View USSD Food Delivery System details">
-              <img src="img/food-delivery.webp" alt="USSD Food Delivery System - Offline food ordering system interface" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
+              <img src="img/food-delivery.webp" alt="USSD Food Delivery System - Offline food ordering system interface" loading="lazy" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; margin-bottom:20px;" />
               <h3 style="color:#14b8a6; margin-bottom:12px; font-family:'Poppins', Arial, sans-serif; font-size:1.15rem; font-weight:700; text-shadow:0 1px 3px rgba(255,255,255,0.8);">USSD Food Delivery System</h3>
               <p style="color:#000; font-family:'Poppins', Arial, sans-serif; font-size:1rem; margin-bottom:12px; line-height:1.5; font-weight:500; text-shadow:0 1px 3px rgba(255,255,255,0.7);">Offline food delivery system using USSD technology for areas with limited internet access. Features restaurant browsing, ordering, and mobile payments (EcoCash, Visa).</p>
               <div style="display:flex; gap:8px; margin-top:auto;">
@@ -371,11 +416,141 @@
             <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
             <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
             <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
+            <span class="dot" style="width:12px; height:12px; border-radius:50%; background:#a8edea; opacity:0.5; transition:opacity 0.2s;"></span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section" style="position:relative; min-height:60vh; width:100vw; display:flex; flex-direction:column; align-items:center; justify-content:center; background:url('img/burj-khalifa.webp') no-repeat center center fixed; background-size:cover; padding-top:60px; padding-bottom:60px; margin-top:128px; margin-bottom:128px;" role="region" aria-label="Experience">
+    <div class="experience-overlay" style="position:absolute; inset:0; width:100vw; height:100%; background:linear-gradient(120deg,rgba(17,17,17,0.20) 0%,rgba(20,184,166,0.10) 100%); z-index:1;"></div>
+    <div class="experience-content" style="position:relative; z-index:2; width:100%; max-width:1200px;">
+      <div style="position:absolute; inset:0; background:linear-gradient(120deg,rgba(255,255,255,0.30) 0%,rgba(20,184,166,0.05) 100%); border-radius:18px; z-index:0; backdrop-filter:blur(25px); border:1px solid rgba(255,255,255,0.4);"></div>
+      <div style="position:relative; z-index:1; padding:48px 32px; border-radius:18px;">
+        <h2 class="section-title" style="font-size:clamp(2.2rem,4vw,3rem); font-family:'Poppins',sans-serif; color:#000; margin:0 0 48px 0; text-align:center; letter-spacing:1px; text-shadow:0 2px 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,0.8); font-weight:700;">Experience</h2>
+        
+        <div class="experience-timeline" style="display:flex; flex-direction:column; gap:32px; max-width:800px; margin:0 auto;">
+          <!-- SWE/AI Intern - Hoopla -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">SWE/AI Intern</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2025</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Hoopla (Techstars23)</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Prototyped LLM-powered features and internal tools; shipped fast iterations with clear metrics</li>
+            </ul>
+          </div>
+
+          <!-- Machine Learning Intern - NYUAD -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">Machine Learning Intern</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2024</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">NYU Abu Dhabi</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Improved glucose detection pipeline; automated data collection; replicated models for accuracy gains</li>
+            </ul>
+          </div>
+
+          <!-- Headstarter AI - SWE Fellow -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">SWE Fellow</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2024</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Headstarter AI</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Delivered weekly product sprints; turned ideas into working demos under time constraints</li>
+            </ul>
+          </div>
+
+          <!-- Business Development Intern -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">Business Development Intern</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2024</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Various Companies</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Developed business strategies and market analysis; supported client relationship management and growth initiatives</li>
+            </ul>
+          </div>
+
+          <!-- Quantum ML Intern - NYUAD -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">Quantum ML Intern</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2023</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">NYU Abu Dhabi</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Implemented tomography on 2-qubit hardware; documented repeatable procedures</li>
+            </ul>
+          </div>
+
+          <!-- Leadership @ NYUAD -->
+          <div class="experience-item" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+              <h3 style="color:#14b8a6; font-size:1.4rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0;">Leadership @ NYUAD</h3>
+              <span style="color:#666; font-size:1rem; font-weight:500;">2023-2025</span>
+            </div>
+            <p style="color:#333; font-size:1.1rem; font-weight:600; margin-bottom:8px;">RA, Dialogue Facilitator, Local Education Officer</p>
+            <ul style="color:#000; font-size:1rem; line-height:1.5; margin:0; padding-left:20px;">
+              <li>Mentored students and ran reliable operations for programs/events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section" style="position:relative; min-height:50vh; width:100vw; display:flex; flex-direction:column; align-items:center; justify-content:center; background:url('img/futuristic-lights.webp') no-repeat center center fixed; background-size:cover; padding-top:60px; padding-bottom:60px; margin-top:128px; margin-bottom:128px;" role="region" aria-label="Skills">
+    <div class="skills-overlay" style="position:absolute; inset:0; width:100vw; height:100%; background:linear-gradient(120deg,rgba(17,17,17,0.20) 0%,rgba(20,184,166,0.10) 100%); z-index:1;"></div>
+    <div class="skills-content" style="position:relative; z-index:2; width:100%; max-width:1000px;">
+      <div style="position:absolute; inset:0; background:linear-gradient(120deg,rgba(255,255,255,0.30) 0%,rgba(20,184,166,0.05) 100%); border-radius:18px; z-index:0; backdrop-filter:blur(25px); border:1px solid rgba(255,255,255,0.4);"></div>
+      <div style="position:relative; z-index:1; padding:48px 32px; border-radius:18px;">
+        <h2 class="section-title" style="font-size:clamp(2.2rem,4vw,3rem); font-family:'Poppins',sans-serif; color:#000; margin:0 0 48px 0; text-align:center; letter-spacing:1px; text-shadow:0 2px 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,0.8); font-weight:700;">Skills</h2>
+        
+        <div class="skills-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:24px;">
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Languages</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">Python, JavaScript/TypeScript, Java, SQL</p>
+          </div>
+          
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Backend</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">FastAPI, Node/Express</p>
+          </div>
+          
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Frontend</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">React, Vite</p>
+          </div>
+          
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Data/ML</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">NumPy, pandas, scikit-learn, basic LLM tooling</p>
+          </div>
+          
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Tools/Infra</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">Git/GitHub, Docker (basic), GCP/AWS (basic)</p>
+          </div>
+          
+          <div class="skill-category" style="background:rgba(255,255,255,0.40); border-radius:16px; padding:24px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.4);">
+            <h3 style="color:#14b8a6; font-size:1.3rem; font-family:'Poppins',sans-serif; font-weight:700; margin:0 0 16px 0;">Ways of Working</h3>
+            <p style="color:#000; font-size:1rem; line-height:1.5; margin:0;">Rapid prototyping, experiment tracking, clean handoff docs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- CONTACT SECTION -->
 <section id="contact" class="parallax-section" style="background-image:url('img/ai-hand.webp'); margin-top:128px; margin-bottom:128px;" role="region" aria-label="Contact">
   <div class="contact-card glassmorph" style="position:relative; z-index:2; background:none; border-radius:0; box-shadow:none; padding:48px 32px; max-width:520px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center;">
@@ -386,7 +561,7 @@
         <div id="contact-success" style="display:none; color:#14b8a6; font-size:1.2rem; font-family:'Poppins',sans-serif; margin-bottom:18px; text-align:center;">Thank you for reaching out! I'll get back to you soon.</div>
         <div class="text-section" style="text-align:center; margin-bottom:18px;">
           <h3 class="text-subtitle" style="font-size:2.2rem; color:#14b8a6; font-family:'Chewy', cursive; margin-bottom:8px;">Contact</h3>
-          <p style="font-size:1.15rem; color:#e0f7fa; font-family:'Fredoka', Arial, sans-serif;">Reach out if you want to collaborate, share ideas, or just say hello. I’m always open to new conversations.</p>
+          <p style="font-size:1.15rem; color:#e0f7fa; font-family:'Fredoka', Arial, sans-serif;">I am open to internships and AI-focused SWE roles. Let's build something useful.</p>
         </div>
         <div class="form-group" style="width:100%; display:flex; flex-direction:column; gap:18px;">
           <label for="fname" style="font-family:'Fredoka', Arial, sans-serif; color:#14b8a6; font-size:1.1rem;">First Name</label>

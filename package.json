@@ -1,0 +1,20 @@
+{
+  "name": "calvin-gutsa-portfolio",
+  "version": "2.0.0",
+  "description": "Calvin Gutsa's AI Engineering Portfolio - Optimized for Performance",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Build complete - static site ready'",
+    "optimize": "echo 'Image optimization recommended'",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": ["portfolio", "ai", "engineering", "web-development", "performance"],
+  "author": "Calvin Gutsa",
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctg7987/ctg7987.github.io"
+  }
+}

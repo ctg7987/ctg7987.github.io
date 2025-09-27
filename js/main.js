@@ -58,9 +58,9 @@ if ('serviceWorker' in navigator) {
     }
   });
 
-  // Typewriter effect for "Software Developer" subtitle
+  // Typewriter effect for "AI Engineer" subtitle
 const typewriterEl = document.getElementById('typewriter-title');
-const typewriterText = 'Software Developer';
+const typewriterText = 'AI Engineer';
 let twIdx = 0, twDir = 1;
 function typewriterLoop() {
   if (!typewriterEl) return;
@@ -182,25 +182,32 @@ if (menuBtn && mainNav) {
 window.showProjectModal = function(idx) {
   const details = [
     {
-      title: 'Neighborhood Helper App',
-      desc: 'A mobile tool for sharing local tips, events, and resources. Designed for simplicity and real-world usefulness.',
-      github: 'https://github.com/ctg7987/neighborhood-helper',
+      title: 'Autonomous Multi-Tool AI Agent',
+      desc: 'AI agent that autonomously performs complex tasks through natural language commands, breaking down requests into actionable steps with web search, analysis, and reporting capabilities.',
+      github: 'https://github.com/ctg7987',
       demo: '#',
-  img: 'img/ai-hand.webp'
+      img: 'img/ai-agent.webp'
     },
     {
-      title: 'Travel Journal Platform',
-      desc: 'A web app for capturing travel stories, photos, and music playlists. Built to spark curiosity and connect people.',
-      github: 'https://github.com/ctg7987/travel-journal',
+      title: 'Custom Knowledge-Base Chatbot',
+      desc: 'RAG-powered chatbot that answers questions by retrieving information from custom documents. Features document upload, semantic search, and cited responses.',
+      github: 'https://github.com/ctg7987',
       demo: '#',
-  img: 'img/museum-of-the-future.webp'
+      img: 'img/vectordatabase.webp'
     },
     {
-      title: 'Smart Reminder System',
-      desc: 'A cross-device reminder tool that adapts to your habits. Focused on design thinking and making daily life smoother.',
-      github: 'https://github.com/ctg7987/smart-reminder',
+      title: 'AI Content Planner & SEO Assistant',
+      desc: 'Smart content strategy tool that generates SEO-optimized outlines, researches trends, and creates data-driven content plans for marketers and creators.',
+      github: 'https://github.com/ctg7987',
       demo: '#',
-  img: 'img/futuristic-lights.webp'
+      img: 'img/marketing.webp'
+    },
+    {
+      title: 'USSD Food Delivery System',
+      desc: 'Offline food delivery system using USSD technology for areas with limited internet access. Features restaurant browsing, ordering, and mobile payments (EcoCash, Visa).',
+      github: 'https://github.com/ctg7987',
+      demo: '#',
+      img: 'img/food-delivery.webp'
     }
   ];
   const d = details[idx];
@@ -218,16 +225,56 @@ window.showProjectModal = function(idx) {
     modal.style.display = 'flex';
     modal.style.alignItems = 'center';
     modal.style.justifyContent = 'center';
-    modal.innerHTML = '<div id="modal-content" style="background:#fff; color:#222; border-radius:24px; max-width:400px; width:90vw; padding:32px 24px; box-shadow:0 8px 32px #14b8a6cc; position:relative; display:flex; flex-direction:column; align-items:center;">'+
-      '<img id="modal-img" src="" alt="Project image" style="width:100%; border-radius:16px; margin-bottom:18px;" />'+
-      '<h2 id="modal-title" style="color:#14b8a6; font-size:2rem; margin-bottom:12px; text-align:center;"></h2>'+
-      '<p id="modal-desc" style="font-size:1.1rem; margin-bottom:18px; text-align:center;"></p>'+
-      '<div style="display:flex; gap:12px; justify-content:center; margin-bottom:18px;">'+
-        '<a id="modal-github" href="#" target="_blank" style="background:#14b8a6; color:#fff; border-radius:8px; padding:6px 14px; font-size:1rem; text-decoration:none;">GitHub</a>'+
-        '<a id="modal-demo" href="#" target="_blank" style="background:#fb7185; color:#fff; border-radius:8px; padding:6px 14px; font-size:1rem; text-decoration:none;">Live Demo</a>'+
-      '</div>'+
-      '<button onclick="closeProjectModal()" style="position:absolute; top:12px; right:12px; background:#fb7185; color:#fff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.3rem; cursor:pointer;">&times;</button>'+
-    '</div>';
+    // Create modal content using safe DOM manipulation
+    const modalContent = document.createElement('div');
+    modalContent.id = 'modal-content';
+    modalContent.className = 'modal-content';
+    
+    const modalImg = document.createElement('img');
+    modalImg.id = 'modal-img';
+    modalImg.alt = 'Project image';
+    modalImg.className = 'modal-img';
+    
+    const modalTitle = document.createElement('h2');
+    modalTitle.id = 'modal-title';
+    modalTitle.className = 'modal-title';
+    
+    const modalDesc = document.createElement('p');
+    modalDesc.id = 'modal-desc';
+    modalDesc.className = 'modal-desc';
+    
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'modal-buttons';
+    
+    const githubLink = document.createElement('a');
+    githubLink.id = 'modal-github';
+    githubLink.target = '_blank';
+    githubLink.rel = 'noopener noreferrer';
+    githubLink.className = 'modal-btn github-btn';
+    githubLink.textContent = 'GitHub';
+    
+    const demoLink = document.createElement('a');
+    demoLink.id = 'modal-demo';
+    demoLink.target = '_blank';
+    demoLink.rel = 'noopener noreferrer';
+    demoLink.className = 'modal-btn demo-btn';
+    demoLink.textContent = 'Live Demo';
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'modal-close';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.onclick = closeProjectModal;
+    
+    buttonContainer.appendChild(githubLink);
+    buttonContainer.appendChild(demoLink);
+    
+    modalContent.appendChild(modalImg);
+    modalContent.appendChild(modalTitle);
+    modalContent.appendChild(modalDesc);
+    modalContent.appendChild(buttonContainer);
+    modalContent.appendChild(closeBtn);
+    
+    modal.appendChild(modalContent);
     document.body.appendChild(modal);
   }
   document.getElementById('modal-img').src = d.img;

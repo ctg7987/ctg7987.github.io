@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ctg7987.github.io/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1

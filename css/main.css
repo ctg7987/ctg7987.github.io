@@ -793,3 +793,105 @@ img { max-width: 100%; height: auto; }
     transform: translateY(6px);
   }
 }
+
+/* Modal Styles - Safe DOM Manipulation */
+.modal-content {
+  background: #fff;
+  color: #222;
+  border-radius: 24px;
+  max-width: 400px;
+  width: 90vw;
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(20, 184, 166, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.modal-title {
+  color: #14b8a6;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal-desc {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.modal-btn {
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.github-btn {
+  background: #14b8a6;
+  color: #fff;
+}
+
+.demo-btn {
+  background: #fb7185;
+  color: #fff;
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fb7185;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: #e85a71;
+  transform: scale(1.1);
+}
+
+/* Hero CTA Button Styles */
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.cta-button:nth-child(1):hover { box-shadow: 0 8px 24px rgba(20,184,166,0.4); }
+.cta-button:nth-child(2):hover { box-shadow: 0 8px 24px rgba(251,113,133,0.4); }
+.cta-button:nth-child(3):hover { box-shadow: 0 8px 24px rgba(56,189,248,0.4); }
+.cta-button:nth-child(4):hover { box-shadow: 0 8px 24px rgba(255,255,255,0.4); }
+
+/* Experience and Skills Section Hover Effects */
+.experience-item:hover, .skill-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
