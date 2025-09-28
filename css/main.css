@@ -131,12 +131,10 @@ html, body {
   background: rgba(255,255,255,0.18);
   backdrop-filter: blur(16px);
   border-radius: 999px;
-  padding: 16px 32px; /* Increased padding for desktop */
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   justify-content: center;
-  gap: 1rem; /* Increased gap for desktop */
   position: fixed;
   top: 24px;
   left: 50%;
@@ -152,6 +150,9 @@ html, body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  white-space: nowrap;
+  align-items: center;
+  overflow-x: visible;
 }
 .glass-nav::-webkit-scrollbar { display: none; }
 .glass-nav.shrunk {
@@ -160,13 +161,6 @@ html, body {
   border-width: 1.5px;
   background: rgba(255,255,255,0.75);
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-.glass-nav {
-  /* Keep links in a single row; allow scroll instead of wrapping into a tall oval */
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  align-items: center;
-  overflow-x: visible;
 }
 
 /* Stronger rule for the exact element (has both classes) */
@@ -217,16 +211,12 @@ html, body {
 .nav-link {
   color: #222;
   text-decoration: none;
-  font-size: 1.1rem; /* Increased font size for desktop */
-  padding: 12px 18px; /* Increased padding for desktop */
   border-radius: 999px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
   font-family: 'Fredoka', Arial, sans-serif;
-  letter-spacing: 1px;
   position: relative;
   font-weight: 700;
   background: rgba(255,255,255,0.55);
-  margin: 0 2px;
   border: none;
   display: inline-flex !important;
   align-items: center !important;
@@ -234,17 +224,17 @@ html, body {
   white-space: nowrap !important;
 }
 
-/* Desktop-specific nav styling */
+/* Desktop-specific nav styling - High specificity */
 @media (min-width: 769px) {
-  .glass-nav {
-    padding: 18px 40px !important;
-    gap: 1.5rem !important;
+  .main-nav.glass-nav {
+    padding: 20px 45px !important;
+    gap: 2rem !important;
   }
-  .nav-link {
-    font-size: 1.2rem !important;
-    padding: 14px 22px !important;
-    margin: 0 3px !important;
-    letter-spacing: 1.5px !important;
+  .main-nav.glass-nav .nav-link {
+    font-size: 1.3rem !important;
+    padding: 16px 24px !important;
+    margin: 0 4px !important;
+    letter-spacing: 2px !important;
   }
 }
 
