@@ -208,13 +208,6 @@ window.showProjectModal = function(idx) {
       github: 'https://github.com/ctg7987/food-delivery-system',
       demo: '#',
       img: 'img/food-delivery.webp'
-    },
-    {
-      title: 'Multifunctional Safety Device for Toddlers',
-      desc: 'Embedded fall/sleep detection system',
-      github: 'https://github.com/ctg7987/toddler-safety-device',
-      demo: '#',
-      img: 'img/ai-hand.webp'
     }
   ];
   const d = details[idx];
