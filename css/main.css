@@ -131,12 +131,12 @@ html, body {
   background: rgba(255,255,255,0.18);
   backdrop-filter: blur(16px);
   border-radius: 999px;
-  padding: 12px 20px;
+  padding: 16px 32px; /* Increased padding for desktop */
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem; /* Increased gap for desktop */
   position: fixed;
   top: 24px;
   left: 50%;
@@ -217,8 +217,8 @@ html, body {
 .nav-link {
   color: #222;
   text-decoration: none;
-  font-size: 0.95rem;
-  padding: 8px 12px;
+  font-size: 1.1rem; /* Increased font size for desktop */
+  padding: 12px 18px; /* Increased padding for desktop */
   border-radius: 999px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
   font-family: 'Fredoka', Arial, sans-serif;
@@ -232,6 +232,20 @@ html, body {
   align-items: center !important;
   flex: 0 0 auto !important;
   white-space: nowrap !important;
+}
+
+/* Desktop-specific nav styling */
+@media (min-width: 769px) {
+  .glass-nav {
+    padding: 18px 40px !important;
+    gap: 1.5rem !important;
+  }
+  .nav-link {
+    font-size: 1.2rem !important;
+    padding: 14px 22px !important;
+    margin: 0 3px !important;
+    letter-spacing: 1.5px !important;
+  }
 }
 
 /* Mobile-specific nav styling */
