@@ -182,30 +182,30 @@ if (menuBtn && mainNav) {
 window.showProjectModal = function(idx) {
   const details = [
     {
-      title: 'Autonomous Multi-Tool AI Agent',
-      desc: 'AI agent that autonomously performs complex tasks through natural language commands, breaking down requests into actionable steps with web search, analysis, and reporting capabilities.',
-      github: 'https://github.com/ctg7987',
+      title: 'Autonomous Task Agent',
+      desc: 'Experimental multi-tool AI agent that autonomously executes research & planning workflows',
+      github: 'https://github.com/ctg7987/autonomous-task-agent',
       demo: '#',
       img: 'img/ai-agent.webp'
     },
     {
-      title: 'Custom Knowledge-Base Chatbot',
-      desc: 'RAG-powered chatbot that answers questions by retrieving information from custom documents. Features document upload, semantic search, and cited responses.',
-      github: 'https://github.com/ctg7987',
+      title: 'RAG Chatbot',
+      desc: 'Retrieval-Augmented Generation chatbot built on FastAPI & LangChain',
+      github: 'https://github.com/ctg7987/rag-chatbot',
       demo: '#',
       img: 'img/vectordatabase.webp'
     },
     {
-      title: 'AI Content Planner & SEO Assistant',
-      desc: 'Smart content strategy tool that generates SEO-optimized outlines, researches trends, and creates data-driven content plans for marketers and creators.',
-      github: 'https://github.com/ctg7987',
+      title: 'Multimodal Content Generator',
+      desc: 'AI suite for generating text + visuals for marketing and creative workflows',
+      github: 'https://github.com/ctg7987/multimodal-content-gen',
       demo: '#',
       img: 'img/marketing.webp'
     },
     {
-      title: 'USSD Food Delivery System',
-      desc: 'Offline food delivery system using USSD technology for areas with limited internet access. Features restaurant browsing, ordering, and mobile payments (EcoCash, Visa).',
-      github: 'https://github.com/ctg7987',
+      title: 'USSD Food Delivery Platform',
+      desc: 'Offline food ordering tool with EcoCash API integration',
+      github: 'https://github.com/ctg7987/food-delivery-system',
       demo: '#',
       img: 'img/food-delivery.webp'
     }
