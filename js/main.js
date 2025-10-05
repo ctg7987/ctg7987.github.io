@@ -185,7 +185,7 @@ window.showProjectModal = function(idx) {
       title: 'Autonomous Task Agent',
       desc: 'Experimental multi-tool AI agent that autonomously executes research & planning workflows',
       github: 'https://github.com/ctg7987/autonomous-task-agent',
-      demo: '#',
+      demo: 'https://www.loom.com/share/91b337fb3d6146a4af81ec753047d7a6?sid=755fa0e3-0b37-447a-b750-08559c4afb75',
       img: 'img/ai-agent.webp'
     },
     {
