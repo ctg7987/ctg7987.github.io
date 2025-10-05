@@ -186,28 +186,32 @@ window.showProjectModal = function(idx) {
       desc: 'Experimental multi-tool AI agent that autonomously executes research & planning workflows',
       github: 'https://github.com/ctg7987/autonomous-task-agent',
       demo: 'https://www.loom.com/share/91b337fb3d6146a4af81ec753047d7a6?sid=755fa0e3-0b37-447a-b750-08559c4afb75',
-      img: 'img/ai-agent.webp'
+      img: 'img/ai-agent.webp',
+      tech: ['FastAPI', 'Python', 'Next.js', 'TypeScript', 'WebSockets', 'Playwright', 'ChromaDB', 'OpenAI', 'Docker']
     },
     {
       title: 'RAG Chatbot',
       desc: 'Retrieval-Augmented Generation chatbot built on FastAPI & LangChain',
       github: 'https://github.com/ctg7987/rag-chatbot',
       demo: '#',
-      img: 'img/vectordatabase.webp'
+      img: 'img/vectordatabase.webp',
+      tech: ['FastAPI', 'Python', 'LangChain', 'Qdrant', 'Next.js', 'TypeScript', 'Docker']
     },
     {
       title: 'Multimodal Content Generator',
       desc: 'AI suite for generating text + visuals for marketing and creative workflows',
       github: 'https://github.com/ctg7987/multimodal-content-gen',
       demo: '#',
-      img: 'img/marketing.webp'
+      img: 'img/marketing.webp',
+      tech: ['FastAPI', 'Python', 'Next.js', 'TypeScript', 'OpenAI', 'Docker']
     },
     {
       title: 'USSD Food Delivery Platform',
       desc: 'Offline food ordering tool with EcoCash API integration',
       github: 'https://github.com/ctg7987/food-delivery-system',
       demo: '#',
-      img: 'img/food-delivery.webp'
+      img: 'img/food-delivery.webp',
+      tech: ['C++', 'USSD', 'EcoCash API', 'SMS Gateway', 'Database Management']
     }
   ];
   const d = details[idx];
