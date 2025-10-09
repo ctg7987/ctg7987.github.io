@@ -307,14 +307,20 @@ if(profileImg){
     profileImg.style.transform = 'none';
   });
 }
-// Contact form custom success message
+// Contact form - Let FormSubmit handle the submission
 const contactForm = document.querySelector('form[action*="formsubmit.co"]');
 if(contactForm){
   contactForm.addEventListener('submit',function(e){
-    e.preventDefault();
-    document.getElementById('contact-success').style.display = 'block';
-    setTimeout(()=>{document.getElementById('contact-success').style.display='none';},4000);
-    contactForm.reset();
+    // Show loading state
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const loadingText = document.getElementById('loadingText');
+    if(submitBtn && submitText && loadingText){
+      submitText.style.display = 'none';
+      loadingText.style.display = 'inline';
+      submitBtn.disabled = true;
+    }
+    // Let the form submit naturally to FormSubmit.co
   });
 }
 
