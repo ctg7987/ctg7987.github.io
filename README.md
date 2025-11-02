@@ -2,7 +2,7 @@
 
 This is the official portfolio website of Calvin Gutsa, an AI Engineer and Computer Engineering student at NYU Abu Dhabi. The site showcases full-stack development projects with applied machine learning, emphasizing end-to-end product delivery and measurable impact.
 
-## 🚀 Recent Updates (January 2025)
+## Recent Updates (January 2025)
 
 **Complete Content Refactor for AI Engineering Positioning:**
 - **Hero Section**: Updated headline to "AI Engineering • Full-Stack + Applied ML"
@@ -11,7 +11,7 @@ This is the official portfolio website of Calvin Gutsa, an AI Engineer and Compu
 - **Skills**: Organized into categories (Languages, Backend, Frontend, Data/ML, Tools/Infra)
 - **Contact**: Clear CTA for "internships and AI-focused SWE roles"
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: Custom CSS with glassmorphism effects
@@ -19,7 +19,7 @@ This is the official portfolio website of Calvin Gutsa, an AI Engineer and Compu
 - **PWA**: Service worker for offline functionality
 - **SEO**: Structured data, meta tags, sitemap
 
-## 📁 File Structure
+## File Structure
 
 ```
 /
@@ -35,7 +35,7 @@ This is the official portfolio website of Calvin Gutsa, an AI Engineer and Compu
 └── package.json        # Project configuration
 ```
 
-## 🎯 Key Features
+## Key Features
 
 - **AI Engineering Focus**: Clear positioning as full-stack developer with ML expertise
 - **Outcome-Driven Content**: Every project includes specific metrics and achievements
@@ -44,7 +44,7 @@ This is the official portfolio website of Calvin Gutsa, an AI Engineer and Compu
 - **Accessibility**: ARIA labels, keyboard navigation, screen reader support
 - **SEO Optimized**: Structured data, meta tags, and search engine friendly
 
-## 📝 Content Updates
+## Content Updates
 
 To update content, edit the following sections in `index.html`:
 - **Hero**: Lines 256-263 (headline and tagline)
@@ -54,11 +54,11 @@ To update content, edit the following sections in `index.html`:
 - **Skills**: Lines 509-539 (skills grid)
 - **Contact**: Lines 552-554 (contact message)
 
-## 🚀 Deployment
+## Deployment
 
 The site is deployed on GitHub Pages at: https://ctg7987.github.io
 
-## 📊 Performance
+## Performance
 
 - **Page Load**: Optimized with lazy loading and preloading
 - **Images**: WebP format with appropriate sizing
