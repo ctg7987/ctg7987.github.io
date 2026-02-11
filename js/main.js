@@ -155,14 +155,31 @@ if (carousel && leftArrow && rightArrow && dots.length > 0) {
 // Responsive: stack cards vertically on mobile
 function handleResize(){
   if(!carousel) return;
+  var slides = document.querySelectorAll('.carousel-slide');
   if(window.innerWidth<700){
     carousel.style.flexDirection='column';
     carousel.style.alignItems='center';
-    carousel.style.gap='32px';
+    carousel.style.gap='24px';
+    carousel.style.overflowX='visible';
+    carousel.style.scrollSnapType='none';
+    slides.forEach(function(s){
+      s.style.minWidth='unset';
+      s.style.maxWidth='100%';
+      s.style.flex='1 1 auto';
+      s.style.width='100%';
+    });
   }else{
     carousel.style.flexDirection='row';
     carousel.style.alignItems='unset';
     carousel.style.gap='32px';
+    carousel.style.overflowX='auto';
+    carousel.style.scrollSnapType='x mandatory';
+    slides.forEach(function(s){
+      s.style.minWidth='260px';
+      s.style.maxWidth='260px';
+      s.style.flex='0 0 260px';
+      s.style.width='';
+    });
   }
 }
 window.addEventListener('resize',handleResize);

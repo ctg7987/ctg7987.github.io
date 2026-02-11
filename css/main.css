@@ -605,19 +605,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Sections built with heavy inline styles: normalize widths to avoid 100vw overflow */
-.hero-section, .welcome-section, .about-section, .projects-section {
+.hero-section, .welcome-section, .about-section, .projects-section,
+.experience-section, .skills-section {
   width: 100% !important;
 }
 /* Override inline content widths */
 .hero-content, .welcome-content { width: 100% !important; }
 /* Default to scroll attachment for broader device support; re-enable fixed on large screens */
-.hero-section, .welcome-section, .about-section, .projects-section, .parallax-section {
+.hero-section, .welcome-section, .about-section, .projects-section,
+.experience-section, .skills-section, .parallax-section {
   background-attachment: scroll !important;
 }
 /* Spacers also should not use 100vw on mobile */
 .parallax-spacer { width: 100% !important; }
 @media (min-width: 1024px) {
-  .hero-section, .welcome-section, .about-section, .projects-section, .parallax-section {
+  .hero-section, .welcome-section, .about-section, .projects-section,
+  .experience-section, .skills-section, .parallax-section {
   background-attachment: fixed !important;
   }
 }
@@ -628,7 +631,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Normalize inline overlay sizes that used 100vw/100vh */
-.landing-overlay { width: 100% !important; height: 100% !important; }
+.landing-overlay,
+.projects-overlay,
+.experience-overlay,
+.skills-overlay,
+.about-section > div:first-child {
+  width: 100% !important;
+  height: 100% !important;
+}
 
 /* Home Section Overlay and Content */
 .home-overlay {
@@ -1228,6 +1238,120 @@ nav a.nav-link:focus {
   33% { transform: translate(25px, -20px) scale(1.04); }
   66% { transform: translate(-15px, 15px) scale(0.96); }
   100% { transform: translate(10px, 20px) scale(1.02); }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVENESS — Comprehensive Fixes
+   ============================================================ */
+
+/* --- Tablet and below (768px) --- */
+@media (max-width: 768px) {
+  /* About section: stack vertically */
+  .about-content {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 24px 16px !important;
+    margin: 0 12px !important;
+  }
+
+  /* Welcome section: reduce padding */
+  .welcome-content {
+    padding: 28px 20px !important;
+    margin: 0 12px !important;
+  }
+
+  /* Experience item headers: stack title above date */
+  .experience-item > div:first-child {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+  .experience-item h3 {
+    font-size: 1.15rem !important;
+  }
+  .experience-item span {
+    font-size: 0.85rem !important;
+  }
+
+  /* Section content boxes: add horizontal margin */
+  .projects-content,
+  .experience-content,
+  .skills-content {
+    margin: 0 12px !important;
+  }
+
+  /* Contact section: tighter padding */
+  .contact-card {
+    padding: 28px 16px !important;
+    max-width: calc(100% - 24px) !important;
+  }
+
+  /* Footer: side margin */
+  .footer-glow {
+    margin: 0 12px !important;
+  }
+
+  /* Project cards: fill width when stacked vertically */
+  .carousel-slide.project-card {
+    min-width: unset !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+
+  /* Hero text: side padding */
+  .hero-content p {
+    padding: 0 16px !important;
+  }
+
+  /* Hero orbs: smaller on mobile */
+  .hero-orb:nth-child(1) { width: 180px; height: 180px; }
+  .hero-orb:nth-child(2) { width: 150px; height: 150px; }
+  .hero-orb:nth-child(3) { width: 120px; height: 120px; }
+}
+
+/* --- Small phones (480px) --- */
+@media (max-width: 480px) {
+  .about-content {
+    gap: 16px !important;
+    padding: 20px 12px !important;
+    margin: 0 8px !important;
+  }
+
+  .welcome-content {
+    padding: 24px 14px !important;
+    margin: 0 8px !important;
+  }
+
+  .projects-content,
+  .experience-content,
+  .skills-content {
+    margin: 0 8px !important;
+  }
+
+  .contact-card {
+    padding: 20px 12px !important;
+    max-width: calc(100% - 16px) !important;
+  }
+
+  .footer-glow {
+    margin: 0 8px !important;
+  }
+
+  /* Experience: tighter timeline indent */
+  .experience-item {
+    padding: 16px 12px !important;
+  }
+
+  /* Skills: tighter tags */
+  .skill-tag {
+    padding: 6px 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Hero orbs: even smaller */
+  .hero-orb:nth-child(1) { width: 120px; height: 120px; }
+  .hero-orb:nth-child(2) { width: 100px; height: 100px; }
+  .hero-orb:nth-child(3) { width: 80px; height: 80px; }
 }
 
 /* --- Accessibility: Reduced Motion --- */
