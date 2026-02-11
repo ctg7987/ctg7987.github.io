@@ -60,7 +60,7 @@ if ('serviceWorker' in navigator) {
 
   // Typewriter effect for "AI Engineer" subtitle
 const typewriterEl = document.getElementById('typewriter-title');
-const typewriterText = 'AI Engineer';
+const typewriterText = 'AI Systems and Applied Machine Learning';
 let twIdx = 0, twDir = 1;
 function typewriterLoop() {
   if (!typewriterEl) return;
@@ -183,7 +183,7 @@ window.showProjectModal = function(idx) {
   const details = [
     {
       title: 'Autonomous Task Agent',
-      desc: 'Experimental multi-tool AI agent that autonomously executes research & planning workflows',
+      desc: 'An experimental multi tool AI system that executes structured research and planning workflows. I built this to better understand how autonomous agents can coordinate tools, memory, and reasoning to complete tasks.',
       github: 'https://github.com/ctg7987/autonomous-task-agent',
       demo: 'https://www.loom.com/share/91b337fb3d6146a4af81ec753047d7a6?sid=755fa0e3-0b37-447a-b750-08559c4afb75',
       img: 'img/ai-agent.webp',
@@ -191,7 +191,7 @@ window.showProjectModal = function(idx) {
     },
     {
       title: 'RAG Chatbot',
-      desc: 'Retrieval-Augmented Generation chatbot built on FastAPI & LangChain',
+      desc: 'A retrieval based chatbot built with FastAPI and LangChain. The system combines vector search with language models to generate context aware responses grounded in a custom knowledge base.',
       github: 'https://github.com/ctg7987/rag-chatbot',
       demo: '#',
       img: 'img/vectordatabase.webp',
@@ -199,7 +199,7 @@ window.showProjectModal = function(idx) {
     },
     {
       title: 'Multimodal Content Generator',
-      desc: 'AI suite for generating text + visuals for marketing and creative workflows',
+      desc: 'An AI powered content system that generates text and visual outputs for creative workflows. This project explores how different models can be combined into a single pipeline.',
       github: 'https://github.com/ctg7987/multimodal-content-gen',
       demo: '#',
       img: 'img/marketing.webp',
@@ -207,7 +207,7 @@ window.showProjectModal = function(idx) {
     },
     {
       title: 'USSD Food Delivery Platform',
-      desc: 'Offline food ordering tool with EcoCash API integration',
+      desc: 'An offline food ordering system integrated with EcoCash APIs. The goal was to design something usable in low connectivity environments while maintaining secure payment flow.',
       github: 'https://github.com/ctg7987/food-delivery-system',
       demo: '#',
       img: 'img/food-delivery.webp',
@@ -336,3 +336,81 @@ document.addEventListener('scroll', function() {
       btn.style.display = 'none';
     }
   });
+
+// ===== AESTHETIC OVERHAUL — Scroll Animations & Effects =====
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Mark body as animation-ready (scopes CSS hidden states)
+  document.body.classList.add('animate-ready');
+
+  // --- Scroll Reveal: Add classes to target elements ---
+  var revealTargets = [
+    { selector: '.welcome-content', cls: 'reveal' },
+    { selector: '.about-content', cls: 'reveal' },
+    { selector: '.projects-content', cls: 'reveal-scale' },
+    { selector: '.experience-content', cls: 'reveal' },
+    { selector: '.skills-content', cls: 'reveal' },
+    { selector: '.contact-card', cls: 'reveal' },
+    { selector: '.footer-glow', cls: 'reveal' }
+  ];
+
+  revealTargets.forEach(function(target) {
+    var el = document.querySelector(target.selector);
+    if (el) el.classList.add(target.cls);
+  });
+
+  // Experience items: staggered slide-in from left
+  var experienceItems = document.querySelectorAll('.experience-item');
+  experienceItems.forEach(function(item, index) {
+    item.classList.add('reveal-left');
+    item.style.transitionDelay = (index * 0.06) + 's';
+  });
+
+  // --- IntersectionObserver for scroll reveals ---
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // --- Staggered Skill Tag Animations ---
+  var skillObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var tags = entry.target.querySelectorAll('.skill-tag');
+        tags.forEach(function(tag, i) {
+          tag.style.transitionDelay = (i * 0.04) + 's';
+          tag.classList.add('revealed');
+        });
+        skillObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -40px 0px', threshold: 0.15 });
+
+  document.querySelectorAll('.skill-category').forEach(function(cat) {
+    skillObserver.observe(cat);
+  });
+
+  // --- Mouse parallax for floating orbs (desktop only) ---
+  if (window.innerWidth > 1024) {
+    var heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', function(e) {
+        var orbs = document.querySelectorAll('.hero-orb');
+        var rect = heroSection.getBoundingClientRect();
+        var x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        var y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        orbs.forEach(function(orb, i) {
+          var factor = (i + 1) * 10;
+          orb.style.transform = 'translate(' + (x * factor) + 'px, ' + (y * factor) + 'px)';
+        });
+      });
+    }
+  }
+});
