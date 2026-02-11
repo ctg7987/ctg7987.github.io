@@ -187,10 +187,12 @@
       .about-section,
       .projects-section,
       .parallax-section,
-      .parallax-spacer,
       .welcome-section {
         background-attachment: scroll !important;
         min-height: 100vh !important;
+      }
+      .parallax-spacer {
+        background-attachment: scroll !important;
       }
       
       /* Ensure sections cover full viewport height */
@@ -215,15 +217,17 @@
     /* iOS Safari specific fixes */
     @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
       .hero-section,
-      .about-section, 
+      .about-section,
       .projects-section,
       .parallax-section,
-      .parallax-spacer,
       .welcome-section {
         background-attachment: scroll !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
         will-change: transform !important;
+      }
+      .parallax-spacer {
+        background-attachment: scroll !important;
       }
       
       /* Additional iOS fixes */
