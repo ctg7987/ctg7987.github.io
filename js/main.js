@@ -60,7 +60,7 @@ if ('serviceWorker' in navigator) {
 
   // Typewriter effect for "AI Engineer" subtitle
 const typewriterEl = document.getElementById('typewriter-title');
-const typewriterText = 'AI Systems and Applied Machine Learning';
+const typewriterText = 'AI Engineer';
 let twIdx = 0, twDir = 1;
 function typewriterLoop() {
   if (!typewriterEl) return;
